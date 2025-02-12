@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #121212;
+  --foreground: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #121212;
+  }
+}
+
+@font-face {
+  font-family: 'Gothic';
+  src: url('/fonts/Gothic/Century Gothic.ttf') format('opentype');
+  font-weight: 300; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothic';
+  src: url('/fonts/Gothic/CenturyGothic.ttf') format('opentype');
+  font-weight: 400; 
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gothic';
+  src: url('/fonts/Gothic/GOTHIC.TTF') format('opentype');
+  font-weight: 300; 
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gothic';
+  src: url('/fonts/Gothic/gothicb.ttf') format('opentype');
+  font-weight:600; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothic';
+  src: url('/fonts/Gothic/GOTHICB0.TTF') format('opentype');
+  font-weight: 800; 
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('/fonts/Caslon/fonnts.com-Big_Caslon_CC_Black.otf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('/fonts/Caslon/fonnts.com-Big_Caslon_CC_Bold.otf') format('opentype');
+  font-weight: 800; 
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('/fonts/Caslon/fonnts.com-Big_Caslon_CC_Black.otf') format('opentype');
+  font-weight: 100; 
+}
+
+
+
+body {
+  color: white;
+  background: #121212;
+  overflow-x: hidden; 
+  font-family: Arial, Helvetica, sans-serif;
+}
