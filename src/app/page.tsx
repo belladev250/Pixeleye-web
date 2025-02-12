@@ -376,9 +376,38 @@ export default function Home() {
 
 {/* PARTNERS SECTION ---->>>>>>>>>>>>>>>>>>>>>> */}
 
-<div className="">
+<div className="w-full ">
 
 <p className="text-center text-5xl font-Caslon">Our Partners</p>
+
+<div className="bg-menuBg mt-20">
+
+  <div className="flex items-center p-10 justify-between ">
+  <Image src="/assets/clients-logo/visit.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/moshions.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/aegis.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/kina.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/jibu.png" alt="" width={70} height={70}/>
+  <Image src="/assets/clients-logo/hanga.png" alt="" width={120} height={120}/>
+  </div>
+
+  <div className="flex items-center p-10 justify-between ">
+  <Image src="/assets/clients-logo/gorilla.png" alt="" width={130} height={130}/>
+  <Image src="/assets/clients-logo/jica.png" alt="" width={80} height={80}/>
+  <Image src="/assets/clients-logo/ict-chamber.png" alt="" width={80} height={80}/>
+  <Image src="/assets/clients-logo/rwandafoam.png" alt="" width={90} height={90}/>
+  <Image src="/assets/clients-logo/mpp.png" alt="" width={100} height={100}/>
+
+ <div className="text-gold font-Caslon text-xl text-center">
+  <p>YOU COULD BE</p>
+  <p> OUR NEXT PARTNER</p>
+ </div>
+  
+  </div>
+
+</div>
+
+
 
 
 </div>
