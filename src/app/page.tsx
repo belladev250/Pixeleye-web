@@ -6,6 +6,7 @@ import { HiArrowLongLeft,HiArrowLongRight} from "react-icons/hi2";
 
 
 
+
 export default function Home() {
   
   const [currentSlide ,setCurrentSlide] = useState(0);
@@ -406,7 +407,6 @@ export default function Home() {
   </div>
 
 </div>
-
 
 
 
