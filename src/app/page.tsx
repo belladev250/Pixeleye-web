@@ -377,13 +377,13 @@ export default function Home() {
 
 {/* PARTNERS SECTION ---->>>>>>>>>>>>>>>>>>>>>> */}
 
-<div className="w-full ">
+<div className="w-full">
 
 <p className="text-center text-5xl font-Caslon">Our Partners</p>
 
-<div className="bg-menuBg mt-20 ">
+<div className="bg-menuBg mt-20 h-[60vh] ">
 
-<div className="grid grid-cols-3 gap-4 space-y-6 lg:space-y-0 p-4 lg:p-10 items-center lg:flex lg:flex-row lg:justify-between">
+<div className="grid grid-cols-3 gap-4 space-y-6 lg:space-y-0 p-4 lg:p-20 items-center lg:flex lg:flex-row lg:justify-between">
   <Image src="/assets/clients-logo/visit.png" alt="" width={100} height={100}/>
   <Image src="/assets/clients-logo/moshions.png" alt="" width={100} height={100}/>
   <Image src="/assets/clients-logo/aegis.png" alt="" width={100} height={100}/>

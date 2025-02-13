@@ -10,17 +10,21 @@ const Footer = () => {
        
     <div className="bg-navColor relative">
     <div className="p-20">
-      <div className="flex items-center justify-between">
-        <Link href="/about" className="font-Gothic font-light text-lg text-white">About</Link>
-        <Link href="/portfolio" className="font-Gothic font-light text-md text-white">Portfolio</Link>
-        <Link href="/services" className="font-Gothic font-light text-md text-white">Services</Link>
-        <Link href="/">
-          <Image src="/assets/logo.svg" alt="logo" width={130} height={130} className="flex-shrink-0" />
-        </Link>
-        <Link href="/stories" className="font-Gothic font-light text-md text-white">Stories</Link>
-        <Link href="/joinus" className="font-Gothic font-light text-md text-white">Join Us</Link>
-        <Link href="/contact" className="font-Gothic font-light text-md text-white">Contact Us</Link>
-      </div>
+    <div className="flex flex-wrap items-center justify-center gap-4 text-center md:justify-between">
+  <Link href="/about" className="font-Gothic font-light text-lg text-white">About</Link>
+  <Link href="/portfolio" className="font-Gothic font-light text-md text-white">Portfolio</Link>
+  <Link href="/services" className="font-Gothic font-light text-md text-white">Services</Link>
+
+  
+  <Link href="/" className="order-first md:order-none">
+    <Image src="/assets/logo.svg" alt="logo" width={130} height={130} className="flex-shrink-0" />
+  </Link>
+
+  <Link href="/stories" className="font-Gothic font-light text-md text-white">Stories</Link>
+  <Link href="/joinus" className="font-Gothic font-light text-md text-white">Join Us</Link>
+  <Link href="/contact" className="font-Gothic font-light text-md text-white">Contact Us</Link>
+</div>
+
   
       <hr className="w-auto border-navBorder mt-10" />
   
