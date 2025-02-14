@@ -58,13 +58,13 @@ const join = () => {
 
         <div className="flex flex-col md:flex-row px-6 w-full lg:p-24 space-y-8 md:space-y-0 md:space-x-8 lg:space-x-16">
           <div className="flex justify-center md:justify-start">
-            <Image src="/assets/girl.jpg" alt="eye" width={300} height={300} className=' h-auto w-full object-cover flex-shrink-0' />
+            <Image src="/assets/boy.jpg" alt="eye" width={300} height={300} className=' h-auto w-full object-cover flex-shrink-0' />
           </div>
 
           <div className="space-y-16 md:space-y-28 md:text-left">
             <div>
-              <p className="font-Gothic text-base md:text-lg lg:text-xl">Full Time</p>
-              <p className="font-Caslon text-xl md:text-3xl lg:text-4xl">Senior Designer</p>
+              <p className="font-Gothic text-base md:text-lg lg:text-xl">Internship</p>
+              <p className="font-Caslon text-xl md:text-3xl lg:text-4xl">Design Director</p>
             </div>
 
             <div className="space-y-4 md:space-x-16 flex flex-col md:flex-row  md:items-start">
