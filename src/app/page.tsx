@@ -192,15 +192,12 @@ export default function Home() {
       <p className=" text-3xl lg:text-5xl font-Caslon"> creative direction</p>
       </div>
 
-      <Image src="/assets/foam2.jpg" height={600} width={600} alt=""  layout="responsive"
-     
-      className="w-full h-auto object-cover"
-    />
+      <Image src="/assets/foam2.jpg" height={600} width={600} alt=""  className="w-full h-auto object-cover"/>
     </div>
 
     <div className="space-y-8 w-full lg:w-1/2">
  
-      <Image src="/assets/foam1.jpg" alt="" width={500} height={600}  layout="responsive"
+      <Image src="/assets/foam1.jpg" alt="" width={500} height={600} 
     
       className="w-full h-auto object-cover"
     />
