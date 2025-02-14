@@ -6,6 +6,7 @@ import { HiArrowLongLeft,HiArrowLongRight} from "react-icons/hi2";
 
 
 
+
 export default function Home() {
   
   const [currentSlide ,setCurrentSlide] = useState(0);
@@ -191,15 +192,12 @@ export default function Home() {
       <p className=" text-3xl lg:text-5xl font-Caslon"> creative direction</p>
       </div>
 
-      <Image src="/assets/foam2.jpg" height={600} width={600} alt=""  layout="responsive"
-     
-      className="w-full h-auto object-cover"
-    />
+      <Image src="/assets/foam2.jpg" height={600} width={600} alt=""  className="w-full h-auto object-cover"/>
     </div>
 
     <div className="space-y-8 w-full lg:w-1/2">
  
-      <Image src="/assets/foam1.jpg" alt="" width={500} height={600}  layout="responsive"
+      <Image src="/assets/foam1.jpg" alt="" width={500} height={600} 
     
       className="w-full h-auto object-cover"
     />
@@ -376,9 +374,37 @@ export default function Home() {
 
 {/* PARTNERS SECTION ---->>>>>>>>>>>>>>>>>>>>>> */}
 
-<div className="">
+<div className="w-full">
 
 <p className="text-center text-5xl font-Caslon">Our Partners</p>
+
+<div className="bg-menuBg mt-20 h-[60vh] ">
+
+<div className="grid grid-cols-3 gap-4 space-y-6 lg:space-y-0 p-4 lg:p-20 items-center lg:flex lg:flex-row lg:justify-between">
+  <Image src="/assets/clients-logo/visit.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/moshions.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/aegis.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/kina.png" alt="" width={100} height={100}/>
+  <Image src="/assets/clients-logo/jibu.png" alt="" width={70} height={70}/>
+  <Image src="/assets/clients-logo/hanga.png" alt="" width={120} height={120}/>
+  </div>
+
+  <div className="grid grid-cols-3 gap-4 p-2  space-y-2 lg:space-y-0 lg:p-10 items-center lg:flex lg:flex-row lg:justify-between">
+  <Image src="/assets/clients-logo/gorilla.png" alt="" width={130} height={130}/>
+  <Image src="/assets/clients-logo/jica.png" alt="" width={80} height={80}/>
+  <Image src="/assets/clients-logo/ict-chamber.png" alt="" width={80} height={80}/>
+  <Image src="/assets/clients-logo/rwandafoam.png" alt="" width={90} height={90}/>
+  <Image src="/assets/clients-logo/mpp.png" alt="" width={100} height={100}/>
+
+ <div className="text-gold font-Caslon text-sm lg:text-xl text-center">
+  <p>YOU COULD BE</p>
+  <p> OUR NEXT PARTNER</p>
+ </div>
+  
+  </div>
+
+</div>
+
 
 
 </div>
