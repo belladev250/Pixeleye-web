@@ -19,7 +19,8 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <hr className="border-navBg" />
+      
+      <hr className="absolute left-0 w-full border-navBorder " />
 
       <div className="p-24">
 
