@@ -222,13 +222,13 @@ export default function Home() {
   </div>
 
   <Image src="/assets/covers.jpg" alt="" height={1000} width={1000} 
-    layout="responsive" className="w-full h-auto object-cover"
+   className="w-full h-auto object-cover"
     />
 </div>
 
 <div className="space-y-8 -mt-10 w-full lg:w-1/2">
 
-  <Image src="/assets/merch.jpg" alt="" width={1600} height={1600}  layout="responsive" className="w-full h-auto object-cover"/>
+  <Image src="/assets/merch.jpg" alt="" width={1600} height={1600}  className="w-full h-auto object-cover"/>
 
  <div className="flex space-x-4">
         <button className="font-Gothic text-xl ">Read Casestudy</button>
@@ -256,7 +256,7 @@ export default function Home() {
   <Image
       src="/assets/flag.jpg"
       alt=""
-      layout="responsive"
+   
       width={500}
       height={500}
       className="w-full h-auto object-cover"
@@ -279,7 +279,7 @@ export default function Home() {
 
 {/* pic 2 */}
   <div className="relative w-full lg:w-1/2">
-  <Image src="/assets/group.jpg" alt=""  layout="responsive"
+  <Image src="/assets/group.jpg" alt="" 
       width={500}
       height={500}
       className="w-full h-auto object-cover"
@@ -309,7 +309,7 @@ export default function Home() {
   <div className="flex flex-col lg:flex-row  space-y-8 lg:space-y-0 lg:space-x-12">
    {/* pic 1 */}
   <div className="relative w-full lg:w-1/2">
-  <Image src="/assets/pk.jpg" alt=""   layout="responsive"
+  <Image src="/assets/pk.jpg" alt=""   
       width={500}
       height={500}
       className="w-full h-auto object-cover"
@@ -332,7 +332,7 @@ export default function Home() {
 {/* pic 2 */}
   <div className="relative w-full lg:w-1/2">
 
-  <Image src="/assets/hanga.jpg" alt=""   layout="responsive"
+  <Image src="/assets/hanga.jpg" alt="" 
       width={500}
       height={500}
       className="w-full h-auto object-cover"
