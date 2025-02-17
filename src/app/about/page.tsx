@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const about = () => {
   return (
-    <div className="p-24 space-y-64 sm:mt-30">
+    <div className="p-24 space-y-48 sm:mt-30">
 
-      <div className=" flex items-center justify-center mt-32">
+      <div className=" flex items-center justify-center mt-24">
 
         <div className=" relative">
           <Image src="/assets/illustration.svg" alt="eye" width={400} height={400} ></Image>
@@ -17,11 +17,11 @@ const about = () => {
             <p>Impact</p>
           </div>
 
-          <div className="font-Gothic  text-lg lg:text-md w-full lg:w-[45vw] space-y-6 lg:mt-60  ">
+          <div className="font-Gothic  text-lg leading-[1.75] lg:text-md w-full lg:w-[45vw] space-y-6 lg:mt-40  ">
             <p>Since 2015, we have been a go-to creative agency for entities that seek crafting narratives that move, inspire and transform. Our vision is clear: Helping businesses build impact through innovative storytelling.
               At Pixel Eye, we give life to creative projects that amplify the client’s vision and mission. Through our services – branding, audio-visual production and campaign management – we shape brand images and build customer relationships that last a lifetime.
             </p>
-            <h1 className="relative text-gold">WHAT’S YOUR STORY?</h1>
+            <h1 className="relative text-gold font-semibold">WHAT’S YOUR STORY?</h1>
           </div>
 
         </div>
