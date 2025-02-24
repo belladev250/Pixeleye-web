@@ -60,6 +60,10 @@ export default function Home() {
     setCurrentSlide((prev)=>(prev+1)%slides.length)
   }
 
+  const handleEmailClick = () => {
+    window.location.href = "mailto:melissaineza8@gmail.com?subject=Partnership%20Inquiry&body=Hello,%20I'd%20like%20to%20discuss%20a%20potential%20partnership.";
+  };
+
   return (
     <div className="overflow-hidden">
 
@@ -151,11 +155,13 @@ export default function Home() {
 
             <div className=" absolute space-y-4">
             <div className="flex space-x-4">
-            <button className="font-Gothic font-semibold ">Email us for partnerships</button>
+            <button className="font-Gothic font-semibold " onClick={handleEmailClick}>Email us for partnerships</button>
             <HiArrowLongRight fill="gold" className="text-4xl"/>
+
             </div>
 
             <h1 className="border-b-2  relative border-gold"></h1>
+
             </div>
            
           </div>
