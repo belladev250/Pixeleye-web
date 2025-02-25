@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
+import Link from 'next/link';
 
 const join = () => {
   return (
@@ -38,10 +39,12 @@ const join = () => {
 
             <div className="space-y-4 md:space-x-16 flex flex-col md:flex-row  md:items-start">
               <div className="space-y-4 flex flex-col md:items-start">
-                <div className="flex space-x-4">
-                  <button className="font-Gothic font-semibold">Read More</button>
-                  <HiArrowLongRight fill="gold" className="text-2xl md:text-4xl" />
-                </div>
+                <Link href='/roledetails'>
+                  <div className="flex space-x-4">
+                    <button className="font-Gothic font-semibold">Read More</button>
+                    <HiArrowLongRight fill="gold" className="text-2xl md:text-4xl" />
+                  </div>
+                </Link>
                 <h1 className="border-b-2 border-gold w-32"></h1>
               </div>
               <button className="bg-gold w-40 md:w-[200px] h-12 md:h-[50px] text-menuBg font-Gothic font-semibold">Apply</button>
@@ -50,10 +53,10 @@ const join = () => {
         </div>
 
         <div className="pl-24 pr-24">
-        <hr className="w-auto border-navBorder p"  />
+          <hr className="w-auto border-navBorder p" />
         </div>
 
-       
+
 
 
         <div className="flex flex-col md:flex-row px-6 w-full lg:p-24 space-y-8 md:space-y-0 md:space-x-8 lg:space-x-16">
@@ -69,10 +72,12 @@ const join = () => {
 
             <div className="space-y-4 md:space-x-16 flex flex-col md:flex-row  md:items-start">
               <div className="space-y-4 flex flex-col md:items-start">
-                <div className="flex space-x-4">
-                  <button className="font-Gothic font-semibold">Read More</button>
-                  <HiArrowLongRight fill="gold" className="text-2xl md:text-4xl" />
-                </div>
+                <Link href='/roledetails'>
+                  <div className="flex space-x-4">
+                    <button className="font-Gothic font-semibold">Read More</button>
+                    <HiArrowLongRight fill="gold" className="text-2xl md:text-4xl" />
+                  </div>
+                </Link>
                 <h1 className="border-b-2 border-gold w-32"></h1>
               </div>
               <button className="bg-gold w-40 md:w-[200px] h-12 md:h-[50px] text-menuBg font-Gothic font-semibold">Apply</button>

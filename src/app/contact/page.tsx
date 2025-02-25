@@ -62,7 +62,7 @@ const Contact = () => {
         </div>
 
         <div className="absolute left-12 lg:left-24 flex flex-col text-left space-y-6">
-          <p className="font-Caslon text-2xl font-regular lg:text-4xl w-full lg:w-[30vw]">
+          <p className="font-Caslon text-3xl font-regular lg:text-6xl w-full lg:w-[55vw]">
           We have great potential, and all you can think of now is;
           get in <span className="text-gold">partneship</span> with us
           </p>
