@@ -7,7 +7,7 @@ const portfolio = () => {
   return (
     <div className='p-20 mt-20 space-y-16 '>
      
-  <p className='text-gold font-Gothic'>Pixeleye Projects </p>
+  <p className='text-gold text-2xl font-Gothic'>PIXELEYE PROJECTS </p>
 
   <div className="relative w-full mt-10 text-xl ">
   <Image
@@ -21,7 +21,7 @@ const portfolio = () => {
 
 <div className=" absolute bottom-0 lg:bottom-8  p-4 lg:p-8 space-y-4">
  <div className="flex space-x-4">
-  <p className=" text-white text-2xl md:text-2xl font-Gothic">RWANDAFOAM </p>
+  <p className=" text-white text-2xl md:text-2xl font-Gothic">RWANDAFOAM</p>
    <HiArrowLongRight fill="gold" className="text-4xl"/>
    </div>
    <div>
@@ -38,7 +38,7 @@ const portfolio = () => {
 {/* pic 1 */}
   <div className="relative w-full lg:w-1/2">
   <Image
-      src="/assets/flag.jpg"
+      src="/assets/paper.jpg"
       alt=""
    
       width={500}
@@ -49,12 +49,12 @@ const portfolio = () => {
 
 <div className=" absolute bottom-0 lg:bottom-8  p-4 lg:p-8 space-y-4">
  <div className="flex space-x-4">
-  <p className=" text-white text-2xl md:text-2xl font-Gothic">YOUTHCONNEKT AFRICA 2024 </p>
+  <p className=" text-white text-2xl md:text-2xl font-Gothic">AEGIS </p>
    <HiArrowLongRight fill="gold" className="text-4xl"/>
    </div>
    <div>
-   <p className="text-white text-3xl md:text-4xl font-Caslon ">Campaign creative </p>
-   <p className="text-white text-3xl md:text-4xl font-Caslon "> direction</p>
+   <p className="text-white text-3xl md:text-4xl font-Caslon ">The stories of  </p>
+   <p className="text-white text-3xl md:text-4xl font-Caslon ">peace books </p>
    </div>
 
    </div>
@@ -85,6 +85,85 @@ const portfolio = () => {
    </div>
 
   </div>
+
+  <div className="relative w-full mt-10 text-xl ">
+  <Image
+      src="/assets/meeting.png"
+      alt=""
+      width={700}
+      height={700}
+      className="w-full h-auto object-cover"
+    />
+ <div className=" absolute inset-0  bg-black opacity-50 "></div>
+
+<div className=" absolute bottom-0 lg:bottom-8  p-4 lg:p-8 space-y-4">
+ <div className="flex space-x-4">
+  <p className=" text-white text-2xl md:text-2xl font-Gothic">YOUTH CONNEKT AFRICA 2024 </p>
+   <HiArrowLongRight fill="gold" className="text-4xl"/>
+   </div>
+   <div>
+   <p className="text-white text-3xl md:text-4xl font-Caslon ">Re-establishing a reputable brand name </p>
+   <p className="text-white text-3xl md:text-4xl font-Caslon "> for across all marketing platforms.</p>
+   </div>
+
+   </div>
+
+  </div>
+
+  {/* big image section */}
+  <div className="flex flex-col lg:flex-row   space-y-8 lg:space-y-0 lg:space-x-12">
+
+{/* pic 1 */}
+  <div className="relative w-full lg:w-1/2">
+  <Image
+      src="/assets/pk.jpg"
+      alt=""
+   
+      width={500}
+      height={500}
+      className="w-full h-auto object-cover"
+    />
+ <div className=" absolute inset-0  bg-black opacity-50 "></div>
+
+<div className=" absolute bottom-0 lg:bottom-8  p-4 lg:p-8 space-y-4">
+ <div className="flex space-x-4">
+  <p className=" text-white text-2xl md:text-2xl font-Gothic">WTDC </p>
+   <HiArrowLongRight fill="gold" className="text-4xl"/>
+   </div>
+   <div>
+   <p className="text-white text-3xl md:text-4xl font-Caslon ">Campaign creative</p>
+   <p className="text-white text-3xl md:text-4xl font-Caslon "> direction </p>
+   </div>
+
+   </div>
+
+  </div>
+
+{/* pic 2 */}
+  <div className="relative w-full lg:w-1/2">
+  <Image src="/assets/group.jpg" alt="" 
+      width={500}
+      height={500}
+      className="w-full h-auto object-cover"
+    />
+  <div className=" absolute inset-0  bg-black opacity-50 "></div>
+
+  <div className=" absolute bottom-8 p-4 lg:p-8 space-y-4">
+ <div className="flex space-x-4">
+  <p className=" text-white text-2xl md:text-2xl font-Gothic">250 PODCAST </p>
+   <HiArrowLongRight fill="gold" className="text-4xl"/>
+   </div>
+   <div>
+   <p className="text-white text-3xl md:text-4xl font-Caslon ">Campaign creative </p>
+   <p className="text-white text-3xl md:text-4xl font-Caslon "> direction</p>
+   </div>
+
+   </div>
+
+   </div>
+
+  </div>
+     
     </div>
   );
 }
