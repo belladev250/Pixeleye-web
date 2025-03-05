@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,14 +12,13 @@ const Portfolio = () => {
 
       {projects.map((project) => (
         <Link key={project.id} href={`/project/${project.id}`} className="relative block group">
-
+          
           {/* Full Width Layout */}
-
           {project.layoutType === "full" && (
             <div className="relative w-full mt-6 md:mt-10">
               <Image
                 src={project.image as string}
-               alt="ddd"
+                alt="ddd"
                 width={700}
                 height={700}
                 className="w-full h-auto object-cover"
@@ -35,14 +35,14 @@ const Portfolio = () => {
             </div>
           )}
 
-
-          {/* Two-Column Layout */}
-          {project.layoutType === "half" && (
+          {/* Two-Column Layout for Half Projects */}
+          {project.layoutType === "half" && project.items && (
             <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-12">
-              {project.items?.map((item) => (
-                <div key={item.id} className="relative w-full lg:w-1/2">
+              
+              {project.items.map((item) => (
+                <Link key={item.id} href={`/project/${item.id}`} className="relative w-full lg:w-1/2">
                   <Image
-                    src={item.image}
+                    src={item.image as string}
                     alt={item.name}
                     width={500}
                     height={500}
@@ -57,10 +57,11 @@ const Portfolio = () => {
                     </div>
                     <p className="text-white text-xl sm:text-2xl md:text-4xl font-Caslon">{item.description}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           )}
+
         </Link>
       ))}
     </div>
