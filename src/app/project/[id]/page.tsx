@@ -14,7 +14,6 @@ const ProjectPage = () => {
     let foundProject = groupedProjects.find((p) => p.id === id);
 
     if (!foundProject) {
-      
       for (let group of groupedProjects) {
         if (group.items) {
           const item = group.items.find((p) => p.id === id);
