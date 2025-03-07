@@ -30,7 +30,10 @@ const Portfolio = () => {
                     <p className="text-white text-lg sm:text-2xl font-Gothic">{project.name}</p>
                     <HiArrowLongRight fill="gold" className="text-2xl sm:text-4xl" />
                   </div>
-                  <p className="text-white text-xl sm:text-2xl md:text-4xl font-Caslon">{project.description}</p>
+                  <p className="text-white text-xl sm:text-2xl md:text-4xl font-Caslon">{project.description}</p> 
+                  <p className="text-white text-xl sm:text-2xl md:text-4xl font-Caslon">{project.description2}</p>
+                  
+
                 </div>
               </div>
             </Link>
@@ -57,6 +60,8 @@ const Portfolio = () => {
                         <HiArrowLongRight fill="gold" className="text-2xl sm:text-4xl" />
                       </div>
                       <p className="text-white text-xl sm:text-2xl md:text-4xl font-Caslon">{item.description}</p>
+                      <p className="text-white text-xl sm:text-2xl md:text-4xl font-Caslon">{item.description2}</p>
+
                     </div>
                   </Link>
                 </div>
