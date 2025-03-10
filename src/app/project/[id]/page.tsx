@@ -54,13 +54,17 @@ const ProjectPage = () => {
   <p className="text-lg font-Gothic">{project.details}</p>
 
   <div className="relative w-full mt-6 md:mt-10">
-    <Image
-      src={project.mainImage as string}
-      alt="ddd"
-      width={1920} // Large width to ensure full coverage
-      height={1000} // Adjust height proportionally
-      className="w-full h-auto object-cover"
-    />
+ 
+<video
+                
+                src="/PxEvids/Videos/Rwandafoam.mp4"
+                muted
+                className="w-full h-full object-cover"
+                autoPlay
+                preload="auto"
+                controls
+            
+              ></video>
 
         {/* TEXT SECTION */}
 
@@ -89,21 +93,100 @@ const ProjectPage = () => {
 
     {/* IMAGES SECTION */}
 
-    <div className="space-y-6">
+    <div className="space-y-12">
       <div className="flex space-x-12  w-full  mt-20">
-        <Image  src="/assets/foam1.jpg" width={200} height={200} alt="fggg" className="w-1/2 h-auto object-cover" />
-        <Image  src="/assets/foam1.jpg" width={200} height={200} alt="fggg" className="w-1/2 h-auto object-cover" />
+        <Image  src="/assets/mom.png" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
+        <Image  src="/assets/rose.jpg" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
       </div>
 
       <Image
-      src="/assets/landscape.jpg"
+      src="/assets/sirimuka.png"
       alt="ddd"
-      width={1920} // Large width to ensure full coverage
-      height={1000} // Adjust height proportionally
-      className="w-full h-auto object-cover"
+      width={1920} 
+      height={1000} 
+      className="w-full h-[80vh] object-cover"
     />
     </div>
 
+    {/* SUB PROJECT SECTION */}
+    <div className="flex w-full justify-between  mt-20">
+    
+        <div className="">
+        <p className="font-semibold font-Caslon text-3xl">RwandaFoam at Tour  </p>
+        <p className="font-semibold font-Caslon text-3xl">du Rwanda</p>
+        </div>
+
+       
+      
+
+      <div className="space-y-8 w-1/2 mt-32">
+         <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
+
+         <p className=" font-Gothic text-lg">Pixel Eye was keen on finding out challenges that RwandaFoam was facing. 
+          At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on 
+          guidance on elevating their image through various initiatives.</p>
+
+          
+      </div>
+    </div>
+
+    {/* VIDEO SECTION */}
+    <Image
+      src={project.mainImage as string}
+      alt="ddd"
+      width={1920} // Large width to ensure full coverage
+      height={1000} // Adjust height proportionally
+      className="w-full h-auto  mt-16 object-cover"
+    />
+
+
+
+<div className="flex w-full justify-between  mt-20">
+    
+        <div className="">
+        <p className="font-semibold font-Caslon text-3xl">Re-establish the brand's </p>
+        <p className="font-semibold font-Caslon text-3xl">digital presence</p>
+        </div>
+
+       
+      
+
+      <div className="space-y-8 w-1/2 mt-32">
+         <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
+
+         <p className=" font-Gothic text-lg">With the need to revive their public presence and 
+          re-establish themselves as the leading manufacturer of Pure foam mattresses in Rwanda, 
+          we developed a campaign based communication plan, that focused on re-establishing a reputable 
+          brand name for Rwandafoam across all social media platforms, increase product knowledge by using TV commercials, 
+          and thus generate more sales by establishing Rwandafoam's online shopping platform.</p>
+
+          
+      </div>
+    </div>
+
+
+     {/* IMAGES SECTION */}
+
+     <div className="space-y-12">
+      <div className="flex space-x-12  w-full  mt-20">
+        <Image  src="/assets/foam1.jpg" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
+        <Image  src="/assets/man.png" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh]  object-cover" />
+      </div>
+
+      <Image
+      src="/assets/foam2.jpg"
+      alt="ddd"
+      width={900} 
+      height={900} 
+      className="w-full h-[90vh] object-cover"
+    />
+    </div>
+
+    {/* NETWORK SECTION */}
+
+
+    {/* FOOTER SECTION  */}
+    
 
 
   </div>
@@ -115,9 +198,7 @@ const ProjectPage = () => {
         </>
       )}
 
-      <Link href="/portfolio" className="mt-6 inline-block text-blue-500 hover:underline">
-        ← Back to Portfolio
-      </Link>
+     
     </div>
   );
 };
