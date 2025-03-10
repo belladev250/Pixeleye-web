@@ -5,6 +5,7 @@ import groupedProjects from '../../../projects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from "../../../projects";
+import JoinUs from '@/components/JoinUs';
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -33,7 +34,7 @@ const ProjectPage = () => {
   }
 
   return (
-    <div className="p-20 ">
+    <div className=" ">
       {project && project.items && project.items.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {project.items.map((item: Project) => (
@@ -48,7 +49,7 @@ const ProjectPage = () => {
       ) : (
         <>
                      
-                     <div className="space-y-6">
+                     <div className="space-y-6 p-20">
   <p className='text-xl text-gold font-Gothic'>BRAND IDENTITY</p>
   <p className="text-2xl font-Caslon">{project.name}</p>
   <p className="text-lg font-Gothic">{project.details}</p>
@@ -186,19 +187,23 @@ const ProjectPage = () => {
 
 
     {/* FOOTER SECTION  */}
-    
+
+
+
 
 
   </div>
+  
 </div>
 
 
 
 
+<JoinUs/>
+
         </>
       )}
 
-     
     </div>
   );
 };
