@@ -19,8 +19,8 @@ const Portfolio = () => {
                 <Image
                   src={project.image as string}
                   alt="ddd"
-                  width={700}
-                  height={700}
+                  width={1920}
+                  height={1000}
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -48,8 +48,8 @@ const Portfolio = () => {
                     <Image
                       src={item.image as string}
                       alt={item.name}
-                      width={500}
-                      height={500}
+                      width={800}
+                      height={800}
                       className="w-full h-auto object-cover"
                     />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
