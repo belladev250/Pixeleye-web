@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AnimatePresence,motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { HiArrowLongLeft,HiArrowLongRight} from "react-icons/hi2";
+import Link from "next/link";
 
 
 
@@ -209,7 +210,11 @@ export default function Home() {
     />
 
       <div className="flex space-x-4">
+      <Link href='/project/rwandafoam'>
             <button className="font-Gothic text-xl ">Read Casestudy</button>
+      </Link>
+
+
             <HiArrowLongRight fill="gold" className="text-4xl"/>
             </div>
     </div>
@@ -237,8 +242,11 @@ export default function Home() {
   <Image src="/assets/merch.jpg" alt="" width={1600} height={1600}  className="w-full h-auto object-cover"/>
 
  <div className="flex space-x-4">
+        <Link href='/project/aegis'>
         <button className="font-Gothic text-xl ">Read Casestudy</button>
+        </Link>
         <HiArrowLongRight fill="gold" className="text-4xl"/>
+      
         </div>
 </div>
 

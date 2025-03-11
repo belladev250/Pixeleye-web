@@ -7,6 +7,23 @@ export interface Project {
   details:string;
   image: string;
   mainImage:string;
+  video:string;
+  survey1:string;
+  solution1:string;
+  solution2:string;
+  subImage1:string;
+  subImage2:string;
+  subImage3:string;
+  projSubtitle1:string;
+  projSubtitle2:string;
+  projDesc1:string;
+  proj2Subtitle1:string;
+  proj2Subtitle2:string;
+  proj2Desc1:string;
+  sub2Image1:string;
+  sub2Image2:string;
+  sub2Image3:string;
+
   layoutType: "full" | "half";
 }
 
@@ -32,6 +49,23 @@ const projects: Project[] = [
     image: "/assets/landscape.jpg",
     mainImage:"/assets/mattress.jpg",
     layoutType: "full",
+    video:"/PxEvids/Videos/Rwandafoam.mp4",
+    survey1:"Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on guidance on elevating their image through various initiatives.",
+    solution1:"Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on guidance on elevating their image through various initiatives.",
+    solution2:"Activating creative strategies for RwandaFoam has boosted the company's outreach on and offline. Together with the Client, we told stories that turned users into comfortable customers. One mattress at a time.",
+    subImage1:"/assets/mom.png",
+    subImage2:"/assets/rose.jpg",
+    subImage3:"/assets/sirimuka.png",
+    projSubtitle1:"RwandaFoam at Tour du",
+    projSubtitle2:" Rwanda",
+    projDesc1:"As part of elevating the brand image, Pixel Eye launched Sirimuka na Rwandafoam [Upgrade with RwandaFoam]. The campaign that positioned the mattress giant as an attractive choice for high-end clientele.  The aim was to change a mindset held by Made-in-Rwanda-equals-poor-quality believers; revealing the intricate process and premium materials it takes to make the award-winning mattresses.",
+    proj2Subtitle1:"Re-establish the brand's",
+    proj2Subtitle2:"digital presence",
+    proj2Desc1:"With the need to revive their public presence and re-establish themselves as the leading manufacturer of Pure foam mattresses in Rwanda, we developed a campaign based communication plan, that focused on re-establishing a reputable brand name for Rwandafoam across all social media platforms, increase product knowledge by using TV commercials, and thus generate more sales by establishing Rwandafoam's online shopping platform.",
+    sub2Image1:"/assets/foam1.jpg",
+    sub2Image2:"/assets/man.png",
+    sub2Image3:"/assets/landscape.jpg"
+    
   },
 
   // {

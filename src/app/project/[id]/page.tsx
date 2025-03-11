@@ -58,7 +58,7 @@ const ProjectPage = () => {
  
 <video
                 
-                src="/PxEvids/Videos/Rwandafoam.mp4"
+                src={project.video}
                 muted
                 className="w-full h-full object-cover"
                 autoPlay
@@ -72,22 +72,16 @@ const ProjectPage = () => {
     <div className="flex space-x-12 mt-20">
       <div className="space-y-8">
         <p className="font-semibold font-Gothic text-xl">Market survey </p>
-        <p className=" font-Gothic text-lg">Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning
-           of the project, we conducted a thorough market survey to identify areas of improvement. 
-           Pixel Eye analysed the data, and 
-          provided hands-on guidance on elevating their image through various initiatives.</p>
+        <p className=" font-Gothic text-lg">{project.survey1}</p>
 
       </div>
 
       <div className="space-y-8">
          <p className="font-semibold font-Gothic text-xl" >Solution</p>
 
-         <p className=" font-Gothic text-lg">Pixel Eye was keen on finding out challenges that RwandaFoam was facing. 
-          At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on 
-          guidance on elevating their image through various initiatives.</p>
+         <p className=" font-Gothic text-lg">{project.solution1}</p>
 
-          <p className=" font-Gothic text-lg">Activating creative strategies for RwandaFoam has boosted the company's outreach on and offline. 
-            Together with the Client, we told stories that turned users into comfortable customers. One mattress at a time.</p>
+          <p className=" font-Gothic text-lg">{project.solution2}</p>
       </div>
     </div>
 
@@ -96,12 +90,12 @@ const ProjectPage = () => {
 
     <div className="space-y-12">
       <div className="flex space-x-12  w-full  mt-20">
-        <Image  src="/assets/mom.png" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
-        <Image  src="/assets/rose.jpg" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
+        <Image  src={project.subImage1} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
+        <Image  src={project.subImage2} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
       </div>
 
       <Image
-      src="/assets/sirimuka.png"
+      src={project.subImage3}
       alt="ddd"
       width={1920} 
       height={1000} 
@@ -113,8 +107,8 @@ const ProjectPage = () => {
     <div className="flex w-full justify-between  mt-20">
     
         <div className="">
-        <p className="font-semibold font-Caslon text-3xl">RwandaFoam at Tour  </p>
-        <p className="font-semibold font-Caslon text-3xl">du Rwanda</p>
+        <p className="font-semibold font-Caslon text-3xl">{project.projSubtitle1} </p>
+        <p className="font-semibold font-Caslon text-3xl">{project.projSubtitle2}</p>
         </div>
 
        
@@ -123,9 +117,7 @@ const ProjectPage = () => {
       <div className="space-y-8 w-1/2 mt-32">
          <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
 
-         <p className=" font-Gothic text-lg">Pixel Eye was keen on finding out challenges that RwandaFoam was facing. 
-          At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on 
-          guidance on elevating their image through various initiatives.</p>
+         <p className=" font-Gothic text-lg">{project.projDesc1}</p>
 
           
       </div>
@@ -135,8 +127,8 @@ const ProjectPage = () => {
     <Image
       src={project.mainImage as string}
       alt="ddd"
-      width={1920} // Large width to ensure full coverage
-      height={1000} // Adjust height proportionally
+      width={1920} 
+      height={1000}
       className="w-full h-auto  mt-16 object-cover"
     />
 
@@ -145,8 +137,8 @@ const ProjectPage = () => {
 <div className="flex w-full justify-between  mt-20">
     
         <div className="">
-        <p className="font-semibold font-Caslon text-3xl">Re-establish the brand's </p>
-        <p className="font-semibold font-Caslon text-3xl">digital presence</p>
+        <p className="font-semibold font-Caslon text-3xl">{project.proj2Subtitle1}</p>
+        <p className="font-semibold font-Caslon text-3xl">{project.proj2Subtitle2}</p>
         </div>
 
        
@@ -155,11 +147,7 @@ const ProjectPage = () => {
       <div className="space-y-8 w-1/2 mt-32">
          <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
 
-         <p className=" font-Gothic text-lg">With the need to revive their public presence and 
-          re-establish themselves as the leading manufacturer of Pure foam mattresses in Rwanda, 
-          we developed a campaign based communication plan, that focused on re-establishing a reputable 
-          brand name for Rwandafoam across all social media platforms, increase product knowledge by using TV commercials, 
-          and thus generate more sales by establishing Rwandafoam's online shopping platform.</p>
+         <p className=" font-Gothic text-lg">{project.proj2Desc1}</p>
 
           
       </div>
@@ -170,12 +158,12 @@ const ProjectPage = () => {
 
      <div className="space-y-12">
       <div className="flex space-x-12  w-full  mt-20">
-        <Image  src="/assets/foam1.jpg" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
-        <Image  src="/assets/man.png" width={800} height={700} alt="fggg" className="w-1/2 h-[80vh]  object-cover" />
+        <Image  src={project.sub2Image1} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />
+        <Image  src={project.sub2Image2} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh]  object-cover" />
       </div>
 
       <Image
-      src="/assets/foam2.jpg"
+      src={project.sub2Image3}
       alt="ddd"
       width={900} 
       height={900} 
