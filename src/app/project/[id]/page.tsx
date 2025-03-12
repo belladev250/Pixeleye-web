@@ -122,9 +122,9 @@ const ProjectPage = () => {
         </div>
       ) : (
         <>
-          <div className="space-y-16 p-20">
+          <div className="space-y-8 p-20">
             <p className='text-xl text-gold font-Gothic'>BRAND IDENTITY</p>
-            <p className="text-2xl font-Caslon">{project.name}</p>
+            <p className="text-3xl font-Caslon">{project.name}</p>
             <p className="text-lg font-Gothic">{project.details}</p>
 
             {project.video && (
@@ -171,12 +171,12 @@ const ProjectPage = () => {
                 </div>
 
                 <div className="space-y-8 w-1/2 mt-32">
-                  <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
+                {project.desc && <p className=" font-Gothic text-xl text-gold" >{project.desc}</p>}
                   <p className=" font-Gothic text-lg">{project.projDesc1}</p>
                 </div>
               </div>
 
-              {project.mainImage && (
+              {/* {project.mainImage && (
                 <Image
                   src={project.mainImage as string}
                   alt="ddd"
@@ -184,7 +184,7 @@ const ProjectPage = () => {
                   height={1000}
                   className="w-full h-auto  mt-16 object-cover"
                 />
-              )}
+              )} */}
 
               <div className="flex w-full justify-between  mt-20">
                 <div>
@@ -193,7 +193,7 @@ const ProjectPage = () => {
                 </div>
 
                 <div className="space-y-8 w-1/2 mt-32">
-                  <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
+                {project.desc && <p className=" font-Gothic text-xl text-gold" >{project.desc}</p>}
                   <p className=" font-Gothic text-lg">{project.proj2Desc1}</p>
                 </div>
               </div>

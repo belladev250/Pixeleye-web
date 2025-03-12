@@ -8,6 +8,7 @@ export interface Project {
   image: string;
   mainImage:string;
   video:string;
+  desc:string
   survey1:string;
   solution1:string;
   solution2:string;
@@ -59,29 +60,29 @@ const projects: Project[] = [
   {
     id: "rwandafoam",
     name: "RWANDA FOAM",
-    details:"Rwanda Foam is a prominent manufacturer of mattresses and sleep accessories established in 1983. They specialize in producing high-quality foam mattresses designed for comfort and airflow, with a focus on enhancing sleep quality and providing value to customers",
+    details: "Rwanda Foam is a prominent manufacturer of mattresses and sleep accessories established in 1983. They specialize in producing high-quality foam mattresses designed for comfort and airflow, with a focus on enhancing sleep quality and providing value to customers",
     description: "Re-establishing a reputable brand name ",
-    description2:"across all marketing platforms.",
+    description2: "across all marketing platforms.",
     image: "/assets/foam.png",
-    mainImage:"/assets/mattress.jpg",
+    mainImage: "/assets/mattress.jpg",
     layoutType: "full",
-    video:"/PxEvids/Videos/Rwandafoam.mp4",
-    survey1:"Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on guidance on elevating their image through various initiatives.",
-    solution1:"Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on guidance on elevating their image through various initiatives.",
-    solution2:"Activating creative strategies for RwandaFoam has boosted the company's outreach on and offline. Together with the Client, we told stories that turned users into comfortable customers. One mattress at a time.",
-    subImage1:"/assets/mom.png",
-    subImage2:"/assets/rose.jpg",
-    subImage3:"/assets/sirimuka.png",
-    projSubtitle1:"RwandaFoam at Tour du",
-    projSubtitle2:" Rwanda",
-    projDesc1:"As part of elevating the brand image, Pixel Eye launched Sirimuka na Rwandafoam [Upgrade with RwandaFoam]. The campaign that positioned the mattress giant as an attractive choice for high-end clientele.  The aim was to change a mindset held by Made-in-Rwanda-equals-poor-quality believers; revealing the intricate process and premium materials it takes to make the award-winning mattresses.",
-    proj2Subtitle1:"Re-establish the brand's",
-    proj2Subtitle2:"digital presence",
-    proj2Desc1:"With the need to revive their public presence and re-establish themselves as the leading manufacturer of Pure foam mattresses in Rwanda, we developed a campaign based communication plan, that focused on re-establishing a reputable brand name for Rwandafoam across all social media platforms, increase product knowledge by using TV commercials, and thus generate more sales by establishing Rwandafoam's online shopping platform.",
-    sub2Image1:"/assets/foam1.jpg",
-    sub2Image2:"/assets/man.png",
-    sub2Image3:"/assets/landscape.jpg"
-    
+    video: "/PxEvids/Videos/Rwandafoam.mp4",
+    survey1: "Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on guidance on elevating their image through various initiatives.",
+    solution1: "Pixel Eye was keen on finding out challenges that RwandaFoam was facing. At the beginning of the project, we conducted a thorough market survey to identify areas of improvement. Pixel Eye analysed the data, and provided hands-on guidance on elevating their image through various initiatives.",
+    solution2: "Activating creative strategies for RwandaFoam has boosted the company's outreach on and offline. Together with the Client, we told stories that turned users into comfortable customers. One mattress at a time.",
+    subImage1: "/assets/mom.png",
+    subImage2: "/assets/rose.jpg",
+    subImage3: "/assets/sirimuka.png",
+    projSubtitle1: "RwandaFoam at Tour du",
+    projSubtitle2: " Rwanda",
+    projDesc1: "As part of elevating the brand image, Pixel Eye launched Sirimuka na Rwandafoam [Upgrade with RwandaFoam]. The campaign that positioned the mattress giant as an attractive choice for high-end clientele.  The aim was to change a mindset held by Made-in-Rwanda-equals-poor-quality believers; revealing the intricate process and premium materials it takes to make the award-winning mattresses.",
+    proj2Subtitle1: "Re-establish the brand's",
+    proj2Subtitle2: "digital presence",
+    proj2Desc1: "With the need to revive their public presence and re-establish themselves as the leading manufacturer of Pure foam mattresses in Rwanda, we developed a campaign based communication plan, that focused on re-establishing a reputable brand name for Rwandafoam across all social media platforms, increase product knowledge by using TV commercials, and thus generate more sales by establishing Rwandafoam's online shopping platform.",
+    sub2Image1: "/assets/foam1.jpg",
+    sub2Image2: "/assets/man.png",
+    sub2Image3: "/assets/landscape.jpg",
+    desc: "PROJECT DESCRIPTION"
   },
 
   {
@@ -108,7 +109,8 @@ const projects: Project[] = [
     proj2Desc1: "Healing Our Communities is a partnership that also includes Healing and Rebuilding Our Communities- Rwanda and IRDP - Institute of Research and Dialogue for Peace, and is supported by USAID. This joint project is a documentary that highlights the lives that have been positively impacted by the initiative. This inspiring  30 minute documentary reveals what we can all learn from Rwandan peace-builders, 25 years after the Genocide Against the Tutsi and includes stories from Karuna Center's Healing Our Communities program.",
     sub2Image1: "/assets/half1.png",
     sub2Image2: "/assets/half2.png",
-    sub2Image3: "/assets/page.png"
+    sub2Image3: "/assets/page.png",
+    desc: "PROJECT DESCRIPTION"
   },
 
   {
@@ -135,7 +137,8 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    desc: "PROJECT DESCRIPTION"
   },
 
   {
@@ -163,24 +166,25 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    desc: "PROJECT DESCRIPTION"
   },
   {
     id: "wtdc",
-    name: "WTDC",
+    name: " ITU WTDC",
     description: "Campaign creative ",
     description2: "direction.",
     image: "/assets/pk.jpg",
     layoutType: "half",
-    details: "",
-    mainImage: "",
+    details: "The World Telecommunication Development Conference (WTDC), hosted by the International Telecommunication Union (ITU), is a crucial event for every leader that wants to shape a future for telecommunication.",
+    mainImage: "/assets/mainimg.png",
     video: "",
-    survey1: "",
-    solution1: "",
+    survey1: "PixelEye had the vital role of providing audio-visual support for their first conference held in Rwanda. Our mission went beyond technical support — we were tasked with creating awareness and ensuring the event makes a lasting impact in this new and exciting location. ITUWTDC is well known for fostering the development of digital solutions. For its inaugural conference in Rwanda, the ITU faced challenges related to visibility and awareness in this new location. Our mission went beyond technical support — we were tasked with creating awareness and ensuring the event makes a lasting impact in this new and exciting location.",
+    solution1: "PixelEye had the chance to participate for their first time in Africa by a virtual approach that engages audiences, going from impactful social media content to an entire website dedicated to spreading awareness before, during and after the event.",
     solution2: "",
-    subImage1: "",
-    subImage2: "",
-    subImage3: "",
+    subImage1: "/assets/td2.png",
+    subImage2: "/assets/paula.png",
+    subImage3: "/assets/td1.png",
     projSubtitle1: "",
     projSubtitle2: "",
     projDesc1: "",
@@ -189,7 +193,8 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    desc: "PROJECT DESCRIPTION"
   },
   {
     id: "jibu",
@@ -216,7 +221,8 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    desc: "PROJECT DESCRIPTION"
   },
   {
     id: "hanga-pitchfest",
@@ -242,7 +248,8 @@ const projects: Project[] = [
     proj2Desc1: "Hanga Hubs is that one place you want to be in if you are a creator, business-minded and love tech! It comes as no surprise that we are part of this grail!.Hanga Hubs focuses on nurturing the Rwanda innovation ecosystems by providing resources and training to startups and creatives. We provided visual branding, promotional videos, educational materials and responded as present to provide great launch campaigns.",
     sub2Image1: "/assets/woman.png",
     sub2Image2: "/assets/vr.png",
-    sub2Image3: "/assets/ppl.png"
+    sub2Image3: "/assets/ppl.png",
+    desc: "PROJECT DESCRIPTION"
   },
 
   {
@@ -250,7 +257,7 @@ const projects: Project[] = [
     name: "TREND TENSE",
     description: "Campaign creative ",
     description2: "direction.",
-
+    desc:"PROJECT DESCRIPTION",
     image: "/assets/trends.jpg",
     layoutType: "half",
     details: "At PixelEye, Trends Tense is where the buzz begins. Born from our passion for exploring the new and the next, Trends Tense is our way of spotlighting the trends steering industries & cultures and stirring meaningful conversations.",
@@ -281,15 +288,15 @@ const projects: Project[] = [
 
     image: "/assets/imivugo.jpg",
     layoutType: "half",
-    details: "",
-    mainImage: "",
+    details: "The Imivugo Series delivers captivating stories through modern visual artistry. Our goal was to give unfiltered access to different journeys from Rwandan creatives and an opportunity to inspire thousands of dreamers.",
+    mainImage: "/assets/mvgmain.png",
     video: "",
-    survey1: "",
-    solution1: "",
-    solution2: "",
-    subImage1: "",
-    subImage2: "",
-    subImage3: "",
+    survey1: "In a country full of artists, many lack something crucial to grow: a voice. The Imivugo Series seeks to bridge a hole in the Rwandan creative industry: the limited visibility and reach of entities. Despite the growing appreciation for local narratives, many creators struggle to find platforms to showcase their talent. By creating the Imivugo Series, PixelEye aims to amplify voices, connect artists with audiences and inspire vibrant creative conversations in Rwanda.",
+    solution1: "To help our local creatives find a community where they can express themselves, PixelEye decided to design a multi-channel approach to immortalise thousands of stories. ",
+    solution2: "By providing a clean production, engaging social media teasers and amplifying the art form across digital sources, we made the Imivugo Series a source for all the passionate individuals who needed inspiration and wanted to nurture their creativity but also a platform for those who had a story to share.",
+    subImage1: "/assets/imivugo3.png",
+    subImage2: "/assets/imivugo2.png",
+    subImage3: "/assets/imivugo1.png",
     projSubtitle1: "",
     projSubtitle2: "",
     projDesc1: "",
@@ -298,7 +305,8 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    desc: "PROJECT DESCRIPTION"
   },
   {
     id: "tekana",
@@ -325,7 +333,8 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    desc: "PROJECT DESCRIPTION"
   },
 ];
 
