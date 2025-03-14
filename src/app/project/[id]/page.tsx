@@ -98,25 +98,29 @@ const ProjectPage = () => {
                 />
               )}
 
+
+{(item.projSubtitle1 || item.projSubtitle2 || item.projDesc1) && (
+
+              <>
               <div className="flex w-full justify-between  mt-20">
-                <div>
-                  <p className="font-semibold font-Caslon text-3xl">{item.proj2Subtitle1}</p>
-                  <p className="font-semibold font-Caslon text-3xl">{item.proj2Subtitle2}</p>
-                </div>
+                  <div>
+                    <p className="font-semibold font-Caslon text-3xl">{item.proj2Subtitle1}</p>
+                    <p className="font-semibold font-Caslon text-3xl">{item.proj2Subtitle2}</p>
+                  </div>
 
-                <div className="space-y-8 w-1/2 mt-32">
-                  <p className=" font-Gothic text-xl text-gold" >PROJECT DESCRIPTION</p>
-                  <p className=" font-Gothic text-lg">{item.proj2Desc1}</p>
-                </div>
-              </div>
+                  <div className="space-y-8 w-1/2 mt-32">
+                    <p className=" font-Gothic text-xl text-gold">PROJECT DESCRIPTION</p>
+                    <p className=" font-Gothic text-lg">{item.proj2Desc1}</p>
+                  </div>
+                </div><div className="space-y-12">
+                    <div className="flex space-x-12  w-full  mt-20">
+                      {item.sub2Image1 && <Image src={item.sub2Image1} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
+                      {item.sub2Image2 && <Image src={item.sub2Image2} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
+                    </div>
+                    {item.sub2Image3 && <Image src={item.sub2Image3} alt="ddd" width={900} height={900} className="w-full h-[90vh] object-cover" />}
+                  </div></>
+         )}
 
-              <div className="space-y-12">
-                <div className="flex space-x-12  w-full  mt-20">
-                  {item.sub2Image1 && <Image src={item.sub2Image1} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
-                  {item.sub2Image2 && <Image src={item.sub2Image2} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
-                </div>
-                {item.sub2Image3 && <Image src={item.sub2Image3} alt="ddd" width={900} height={900} className="w-full h-[90vh] object-cover" />}
-              </div>
             </div>
           ))}
         </div>
@@ -176,7 +180,7 @@ const ProjectPage = () => {
                 </div>
               </div>
 
-              {/* {project.mainImage && (
+              {project.mainImage && (
                 <Image
                   src={project.mainImage as string}
                   alt="ddd"
@@ -184,27 +188,29 @@ const ProjectPage = () => {
                   height={1000}
                   className="w-full h-auto  mt-16 object-cover"
                 />
-              )} */}
+              )}
+{(project.projSubtitle1 || project.projSubtitle2 || project.projDesc1) && (
 
-              <div className="flex w-full justify-between  mt-20">
-                <div>
-                  <p className="font-semibold font-Caslon text-3xl">{project.proj2Subtitle1}</p>
-                  <p className="font-semibold font-Caslon text-3xl">{project.proj2Subtitle2}</p>
-                </div>
 
-                <div className="space-y-8 w-1/2 mt-32">
-                {project.desc && <p className=" font-Gothic text-xl text-gold" >{project.desc}</p>}
-                  <p className=" font-Gothic text-lg">{project.proj2Desc1}</p>
-                </div>
-              </div>
+              <><div className="flex w-full justify-between  mt-20">
+                  <div>
+                    <p className="font-semibold font-Caslon text-3xl">{project.proj2Subtitle1}</p>
+                    <p className="font-semibold font-Caslon text-3xl">{project.proj2Subtitle2}</p>
+                  </div>
 
-              <div className="space-y-12">
-              <div className="flex space-x-12  w-full  mt-20">
-                {project.sub2Image1 && <Image src={project.sub2Image1} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
-                {project.sub2Image2 && <Image src={project.sub2Image2} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
-              </div>
-              {project.sub2Image3 && <Image src={project.sub2Image3} alt="ddd" width={1920} height={1000} className="w-full h-[80vh] object-cover" />}
-            </div>
+                  <div className="space-y-8 w-1/2 mt-32">
+                    {project.desc && <p className=" font-Gothic text-xl text-gold">{project.desc}</p>}
+                    <p className=" font-Gothic text-lg">{project.proj2Desc1}</p>
+                  </div>
+                </div><div className="space-y-12">
+                    <div className="flex space-x-12  w-full  mt-20">
+                      {project.sub2Image1 && <Image src={project.sub2Image1} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
+                      {project.sub2Image2 && <Image src={project.sub2Image2} width={800} height={700} alt="fggg" className="w-1/2 h-[80vh] object-cover" />}
+                    </div>
+                    {project.sub2Image3 && <Image src={project.sub2Image3} alt="ddd" width={1920} height={1000} className="w-full h-[80vh] object-cover" />}
+                  </div></>
+
+            )}
           </div>
         </>
       )}

@@ -138,7 +138,7 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: "PROJECT DESCRIPTION"
+    desc: ""
   },
 
   {
@@ -167,7 +167,7 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: "PROJECT DESCRIPTION"
+    desc: ""
   },
   {
     id: "wtdc",
@@ -194,7 +194,7 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: "PROJECT DESCRIPTION"
+    desc: ""
   },
   {
     id: "jibu",
@@ -222,7 +222,7 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: "PROJECT DESCRIPTION"
+    desc: ""
   },
   {
     id: "hanga-pitchfest",
@@ -306,7 +306,7 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: "PROJECT DESCRIPTION"
+    desc: ""
   },
   {
     id: "tekana",
@@ -334,7 +334,7 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: "PROJECT DESCRIPTION"
+    desc: ""
   },
 ];
 
