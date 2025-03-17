@@ -4,7 +4,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <div>
-      <div className="p-24 space-y-32 h-[430px] lg:h-[480px] relative flex items-center justify-center">
+      <div className="p-6 lg:p-24 space-y-32 h-[430px] lg:h-[480px] relative flex items-center justify-center">
 
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <Image src="/assets/illustration.svg" alt="eye" width={400} height={400} />
@@ -22,8 +22,8 @@ const Contact = () => {
       
       <hr className="absolute left-0 w-full border-navBorder " />
 
-      <div className="p-24">
 
+      <div className="p-8 lg:p-24">
 
         {/* ADDRESSES */}
 
@@ -55,7 +55,7 @@ const Contact = () => {
 
       </div>
 
-      <div className="p-24 space-y-16 h-[430px] lg:h-[480px] relative flex items-center justify-center bg-menuBg">
+      <div className="p-8 lg:p-24 space-y-16 h-[430px] lg:h-[480px] relative flex items-center justify-center bg-menuBg">
 
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <Image src="/assets/17svg.svg" alt="eye" width={400} height={400} />

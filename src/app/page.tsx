@@ -4,6 +4,8 @@ import { AnimatePresence,motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { HiArrowLongLeft,HiArrowLongRight} from "react-icons/hi2";
 import Link from "next/link";
+import Lenis from '@studio-freight/lenis';
+
 
 
 
@@ -277,6 +279,8 @@ export default function Home() {
     />
  <div className=" absolute inset-0  bg-black opacity-50 "></div>
 
+ <Link href='/project/youth-connekt'>
+
 <div className=" absolute bottom-0 lg:bottom-8  p-4 lg:p-8 space-y-4">
  <div className="flex space-x-4">
   <p className=" text-white text-2xl md:text-2xl font-Gothic">YOUTHCONNEKT AFRICA 2024 </p>
@@ -289,16 +293,21 @@ export default function Home() {
 
    </div>
 
+   </Link>
+
   </div>
 
 {/* pic 2 */}
-  <div className="relative w-full lg:w-1/2">
+
+  <div className="relative w-full lg:w-1/2 cursor-pointer">
   <Image src="/assets/group.jpg" alt="" 
       width={500}
       height={500}
       className="w-full h-auto object-cover"
     />
   <div className=" absolute inset-0  bg-black opacity-50 "></div>
+
+  <Link href='/project/250-podcast'>
 
   <div className=" absolute bottom-8 p-4 lg:p-8 space-y-4">
  <div className="flex space-x-4">
@@ -312,7 +321,11 @@ export default function Home() {
 
    </div>
 
+   </Link>
+
    </div>
+
+   
 
   </div>
 
@@ -329,6 +342,10 @@ export default function Home() {
       className="w-full h-auto object-cover"
     />
   <div className=" absolute inset-0  bg-black opacity-50 "></div>
+
+  
+  <Link href='/project/wtdc'>
+
   <div className=" absolute bottom-8 p-4 lg:p-8 space-y-4">
  <div className="flex space-x-4">
   <p className=" text-white text-2xl md:text-2xl font-Gothic">WTDC </p>
@@ -340,6 +357,8 @@ export default function Home() {
    </div>
 
    </div>
+
+   </Link>
 
   </div>
 
@@ -353,6 +372,8 @@ export default function Home() {
     />
   <div className=" absolute inset-0  bg-black opacity-50 "></div>
 
+  <Link href='/project/hanga-pitchfest'>
+
   <div className=" absolute bottom-8 p-4 lg:p-8 space-y-4">
  <div className="flex space-x-4">
   <p className=" text-white text-2xl md:text-2xl font-Gothic">HANGA PITCHFEST </p>
@@ -365,17 +386,27 @@ export default function Home() {
 
    </div>
 
+   </Link>
+
   </div>
 
   </div>
 
   <div className="relative space-y-4 text-center">
+  <Link href='/portfolio'>
+
     <button className="font-Gothic font-semibold whitespace-nowrap border-b -2 border-gold pb-4">
+      
+
       <div className="flex ">
       Discover more projects
       <HiArrowLongRight fill="gold" className="text-2xl ml-2" />
       </div>
+
+   
     </button>
+
+    </Link>
    
 
 </div>

@@ -22,7 +22,7 @@ const stories = () => {
 
       {/* ONE STORY */}
 
-      <div className='p-24 space-y-16'>
+      <div className=' p-8 lg:p-24 space-y-16'>
         <div className='space-y-4'>
           <div className="flex flex-col md:flex-row w-full space-y-6 md:space-y-0 md:space-x-8 lg:space-x-16">
             <div className="w-full md:w-1/3 flex justify-center md:justify-start">
@@ -66,7 +66,7 @@ const stories = () => {
               </div>
               <div className="space-y-4">
                 <Link href='/storydetails'>
-                  <div className="flex space-x-4 items-center">
+                  <div className=" flex space-x-4 items-center">
                     <button className="font-Gothic font-semibold">Read More</button>
                     <HiArrowLongRight fill="gold" className="text-xl md:text-2xl" />
                   </div>

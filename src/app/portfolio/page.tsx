@@ -7,7 +7,7 @@ import projects from "../../projects";
 
 const Portfolio = () => {
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:p-20 mt-10 md:mt-20 space-y-8 md:space-y-16">
+    <div className="px-4 sm:px-8 md:px-12 p-24 lg:p-20 mt-10 md:mt-20 space-y-8 md:space-y-16">
       <p className="text-gold text-xl sm:text-2xl font-Gothic">PIXELEYE PROJECTS</p>
 
       {projects.map((project) => (

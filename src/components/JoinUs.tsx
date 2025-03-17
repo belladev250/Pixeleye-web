@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const JoinUs = () => {
   return (
-    <div className="  p-20 relative  h-[300px] lg:h-[450px] bg-menuBg">
+    <div className="  p-8 lg:p-20 relative  h-[300px] lg:h-[450px] bg-menuBg">
 
        
 
@@ -15,10 +15,10 @@ const JoinUs = () => {
          
       </div>
 
-      <div className="font-Caslon space-y-10  absolute top-32 ">
+      <div className="font-Caslon space-y-10  absolute top-10 lg:top-32  mr-2 lg:mr-0  ">
         <div className="">
-            <p className=" font-Caslon text-5xl  ">We are looking for dynamic</p>
-            <p  className=" font-Caslon text-5xl  "> and creative minds to join our team. </p>
+            <p className=" font-Caslon text-3xl lg:text-5xl ">We are looking for dynamic</p>
+            <p  className=" font-Caslon text-3xl lg:text-5xl  "> and creative minds to join our team. </p>
         </div>
 
             <button className='font-Gothic bg-white text-black p-4 px-8 ' > Join us Today</button>

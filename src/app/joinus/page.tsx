@@ -25,7 +25,7 @@ const join = () => {
       <hr className="absolute left-0 w-full border-navBorder " />
 
 
-      <div className='space-y-16 p-24'>
+      <div className='space-y-16 p-8 lg:p-24'>
 
         {/* ROLE ONE */}
 
