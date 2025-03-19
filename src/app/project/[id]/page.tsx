@@ -10,7 +10,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from 'next/router';
 
 const ProjectPage = () => {
-  const { id } = useParams();
+  
+  const params = useParams();
+  const id = params?.id as string;
   const [project, setProject] = useState<Project | null>(null);
 
   // Initialize Lenis smooth scrolling
