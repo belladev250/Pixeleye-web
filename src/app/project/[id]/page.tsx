@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from 'next/router';
 
 const ProjectPage = () => {
-  
+
   const params = useParams();
   const id = params?.id as string;
   const [project, setProject] = useState<Project | null>(null);
@@ -36,21 +36,22 @@ const ProjectPage = () => {
   }, []);
 
   useEffect(() => {
-    let foundProject = groupedProjects.find((p) => p.id === id);
-
+    let foundProject: Project | null = groupedProjects.find((p) => p.id === id) as Project | null;
+  
+    // If not found, look in the items of each group
     if (!foundProject) {
       for (let group of groupedProjects) {
         if (group.items) {
           const item = group.items.find((p) => p.id === id);
           if (item) {
-            foundProject = item;
+            foundProject = item as Project;
             break;
           }
         }
       }
     }
-
-    setProject(foundProject || null);
+  
+    setProject(foundProject);
   }, [id]);
 
   if (!project) {
