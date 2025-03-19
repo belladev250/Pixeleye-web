@@ -33,7 +33,7 @@ const ServicesPage = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="p-6 space-y-24 sm:mt-30">
+      <div className="p-6 space-y-48 sm:mt-30">
         <div className="flex items-center justify-center mt-24">
           <div className="relative">
             <Image src="/assets/illustration.svg" alt="eye" width={400} height={400} />
@@ -54,9 +54,17 @@ const ServicesPage = () => {
       </div>
 
       {/* Services section */}
-      <div className="w-full px-4 py-10">
+      <div className="w-full">
         {/* Custom styles */}
         <style jsx global>{`
+          .hidden-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .hidden-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          
           @keyframes pulse {
             0% { opacity: 0.6; }
             50% { opacity: 1; }
@@ -110,50 +118,38 @@ const ServicesPage = () => {
           }
         `}</style>
 
-        {/* Service selection tabs */}
-        <div className="max-w-6xl mx-auto mb-8">
-          <div className="flex justify-center gap-4 mb-6">
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => handleServiceClick(index)}
-                className={`px-4 py-2 ${
-                  index === activeIndex 
-                    ? 'border-b-2 border-gold font-bold' 
-                    : 'text-gray-600 hover:text-black'
-                } transition-all duration-300 font-Gothic`}
-              >
-                {service.title}
-              </button>
-            ))}
-          </div>
+        {/* Initial click instruction */}
+        <div className="text-center px-20 mb-6">
+          <p className="font-Gothic text-sm text-gray-500 click-instruction">
+            Click on a service to learn more
+          </p>
         </div>
 
-      
-        
-
-        {/* Centered active service */}
-        <div className="p-16 ">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Service image */}
+        {/* Scroll container with items */}
+        <div className="flex space-x-6 p-20 pt-0 overflow-x-auto snap-x snap-mandatory hidden-scrollbar">
+          {services.map((service, index) => (
             <div 
-              className="service-item w-full lg:w-1/2 cursor-pointer transition-all duration-300 active shadow-lg"
-              onMouseEnter={() => setHoveredIndex(activeIndex)}
+              key={index}
+              onClick={() => handleServiceClick(index)}
+              onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              className={`service-item shrink-0 snap-center w-4/5 md:w-1/2 lg:w-2/5 cursor-pointer transition-all duration-300 ${
+                index === activeIndex ? 'active shadow-lg scale-105' : ''
+              }`}
             >
               <Image
-                src={services[activeIndex].image}
-                alt={services[activeIndex].title}
-                width={1920}
-                height={1080}
-                className="w-full h-[60vh] rounded-lg object-cover"
+                src={service.image}
+                alt={service.title}
+                width={800}
+                height={500}
+                className="w-full"
                 priority
               />
               
               {/* Hover overlay */}
-              <div className="service-overlay rounded-lg">
+              <div className="service-overlay">
                 <div className="bg-black bg-opacity-50 text-white px-4 py-2 rounded-full">
-                  {services[activeIndex].title}
+                  Click to view details
                 </div>
               </div>
               
@@ -163,39 +159,27 @@ const ServicesPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
+              
+              {/* Animated border when hovered */}
+              {hoveredIndex === index && (
+                <div className="absolute inset-0 border-2 border-gold" style={{ 
+                  backgroundImage: 'linear-gradient(90deg, transparent 50%, gold 50%)',
+                  backgroundSize: '10px 1px',
+                  backgroundRepeat: 'repeat-x',
+                  height: '100%',
+                  animation: 'slide 20s linear infinite'
+                }}></div>
+              )}
             </div>
-            
-            {/* Service description */}
-            <div className="w-full lg:w-1/2">
-              <div key={activeIndex} className="space-y-4 transition-all duration-500">
-                <p className="font-Caslon text-4xl">{services[activeIndex].title}</p>
-                <h1 className="border-b-2 border-gold w-16"></h1>
-                <p className="font-Gothic text-md">{services[activeIndex].description}</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-
-        {/* Service thumbnails */}
-        <div className=" mt-12">
-          <div className="flex justify-center gap-4">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                onClick={() => handleServiceClick(index)}
-                className={`w-20 h-20 cursor-pointer transition-all duration-300 ${
-                  index === activeIndex ? 'ring-2 ring-gold' : 'opacity-70 hover:opacity-100'
-                }`}
-              >
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={100}
-                  height={100}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
+        
+       
+        <div className="px-20 -mt-12">
+          <div key={activeIndex} className="space-y-4 transition-all duration-500">
+            <p className="text-left font-Caslon text-4xl">{services[activeIndex].title}</p>
+            <h1 className="border-b-2 border-gold w-16"></h1>
+            <p className="font-Gothic text-md max-w-md">{services[activeIndex].description}</p>
           </div>
         </div>
       </div>
