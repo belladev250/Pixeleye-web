@@ -234,7 +234,7 @@ const MainNavbar = () => {
             animate="visible"
             exit="exit"
           >
-            <ul className='text-4xl lg:text-5xl font-Caslon text-center space-y-6 -mt-52 lg:mt-24'>
+            <ul className='text-4xl lg:text-5xl font-Caslon text-center space-y-6 mt-4 lg:mt-24'>
               {menuItems.map((item, index) => (
                 <motion.li 
                   key={index} 

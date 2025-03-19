@@ -56,10 +56,21 @@ export default function Home() {
   }, [slides.length]);
 
   // Reset and play video once the slide changes
+
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
-      videoRef.current.play();
+      
+      const playPromise = videoRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+          })
+          .catch(error => {
+            console.log("Video playback error:", error);
+          });
+      }
     }
   }, [currentSlide]);
 
@@ -144,7 +155,7 @@ export default function Home() {
       transition={{ duration: 1 }}
     >
       <main>
-        <div className="relative w-full h-[60vh] lg:h-[100vh]">
+        <div className="relative w-full h-[90vh] lg:h-[100vh]">
           <div className="absolute inset-0 bg-black opacity-50"></div>
 
           {/* Video section */}
@@ -158,14 +169,18 @@ export default function Home() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-                <video
-                  ref={videoRef}
-                  src={slide.video}
-                  muted
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  preload="auto"
-                ></video>
+   
+   <video
+  ref={videoRef}
+  key={slide.video}
+  muted
+  playsInline={true}  
+  className="w-full h-full object-cover"
+  autoPlay
+  preload="auto"
+>
+  <source src={slide.video} type="video/mp4" />
+</video>
 
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/60 z-10"></div>
 
