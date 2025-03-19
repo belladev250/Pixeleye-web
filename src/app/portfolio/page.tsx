@@ -106,7 +106,7 @@ const Portfolio = () => {
         PIXELEYE PROJECTS
       </motion.p>
 
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <motion.div 
           key={project.id}
           initial="hidden"

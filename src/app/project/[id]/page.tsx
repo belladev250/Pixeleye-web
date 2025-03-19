@@ -7,6 +7,7 @@ import { Project } from "../../../projects";
 import JoinUs from '@/components/JoinUs';
 import Lenis from '@studio-freight/lenis';
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from 'next/router';
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -134,6 +135,7 @@ const ProjectPage = () => {
                   <motion.div 
                     className="relative w-full mt-4 md:mt-6 lg:mt-10"
                     variants={imageVariants}
+                    initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                   >

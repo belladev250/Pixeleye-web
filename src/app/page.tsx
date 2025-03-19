@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
+import {  HiArrowLongRight } from "react-icons/hi2";
 import Link from "next/link";
 import Lenis from '@studio-freight/lenis';
 
