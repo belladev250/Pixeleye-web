@@ -21,7 +21,7 @@ const ProjectPage = () => {
       smoothWheel: true,
     });
 
-    function raf(time) {
+    function raf(time: any) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
