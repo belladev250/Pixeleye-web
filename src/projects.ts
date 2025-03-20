@@ -24,6 +24,7 @@ export interface Project {
   sub2Image1:string;
   sub2Image2:string;
   sub2Image3:string;
+  items:[];
 
   layoutType: "full" | "half";
 }
@@ -82,7 +83,8 @@ const projects: Project[] = [
     sub2Image1: "/assets/foam1.jpg",
     sub2Image2: "/assets/man.png",
     sub2Image3: "/assets/landscape.jpg",
-    desc: "PROJECT DESCRIPTION"
+    desc: "PROJECT DESCRIPTION",
+    items: []
   },
 
   {
@@ -110,7 +112,8 @@ const projects: Project[] = [
     sub2Image1: "/assets/half1.png",
     sub2Image2: "/assets/half2.png",
     sub2Image3: "/assets/page.png",
-    desc: "PROJECT DESCRIPTION"
+    desc: "PROJECT DESCRIPTION",
+    items: []
   },
 
   {
@@ -124,7 +127,7 @@ const projects: Project[] = [
     mainImage: "",
     video: "/PxEvids/Videos/250 PODCAST CEREMONY.mp4",
     survey1: "The podcasting game might have taken slightly over a minute to get in the Land of a Thousand Hills, but it came in full motion when it got here!250 Podcast Lab was founded with the ambition of nurturing the podcasting ecosystem in Rwanda, aiming to empower local storytellers and creators. At the onset, we faced challenges in establishing a strong, recognizable brand identity while trying to differentiate ourselves in a competitive and emerging market. The demand for a cohesive and professional image that resonated with both creators and audiences was critical to our long-term success.",
-    solution1: "We  provided a comprehensive branding solution that aligned with the core mission. Creating 250 Podcast Lab felt like stepping into a vibrant storytelling workshop, where every idea had the potential to resonate far and wide. We weren’t just barely creators—we were collaborators. From building the brand identity to shaping the learning experience, ",
+    solution1: "We provided a comprehensive branding solution that aligned with the core mission. Creating 250 Podcast Lab felt like stepping into a vibrant storytelling workshop, where every idea had the potential to resonate far and wide. We weren’t just barely creators—we were collaborators. From building the brand identity to shaping the learning experience, ",
     solution2: "we dove in headfirst. We designed and provided the learning materials, tailored to the needs of budding podcasters, and stayed hands-on by supervising the classes to bring those lessons to life. This wasn’t just about tools or content; it was about building a space where Rwanda’s next generation of audio creators could experiment, grow, and find their voice.",
     subImage1: "/assets/man1.png",
     subImage2: "/assets/man2.png",
@@ -138,7 +141,8 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: ""
+    desc: "",
+    items: []
   },
 
   {
@@ -167,7 +171,8 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: ""
+    desc: "",
+    items: []
   },
   {
     id: "wtdc",
@@ -194,7 +199,8 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: ""
+    desc: "",
+    items: []
   },
   {
     id: "jibu",
@@ -222,7 +228,8 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: ""
+    desc: "",
+    items: []
   },
   {
     id: "hanga-pitchfest",
@@ -249,7 +256,8 @@ const projects: Project[] = [
     sub2Image1: "/assets/woman.png",
     sub2Image2: "/assets/vr.png",
     sub2Image3: "/assets/ppl.png",
-    desc: "PROJECT DESCRIPTION"
+    desc: "PROJECT DESCRIPTION",
+    items: []
   },
 
   {
@@ -257,7 +265,7 @@ const projects: Project[] = [
     name: "TREND TENSE",
     description: "Campaign creative ",
     description2: "direction.",
-    desc:"PROJECT DESCRIPTION",
+    desc: "PROJECT DESCRIPTION",
     image: "/assets/trends.jpg",
     layoutType: "half",
     details: "At PixelEye, Trends Tense is where the buzz begins. Born from our passion for exploring the new and the next, Trends Tense is our way of spotlighting the trends steering industries & cultures and stirring meaningful conversations.",
@@ -277,7 +285,8 @@ const projects: Project[] = [
     proj2Desc1: "",
     sub2Image1: "",
     sub2Image2: "",
-    sub2Image3: ""
+    sub2Image3: "",
+    items: []
   },
 
   {
@@ -306,7 +315,8 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: ""
+    desc: "",
+    items: []
   },
   {
     id: "tekana",
@@ -334,7 +344,8 @@ const projects: Project[] = [
     sub2Image1: "",
     sub2Image2: "",
     sub2Image3: "",
-    desc: ""
+    desc: "",
+    items: []
   },
 ];
 
