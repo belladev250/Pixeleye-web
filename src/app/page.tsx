@@ -83,7 +83,7 @@ export default function Home() {
   }
 
   const handleEmailClick = () => {
-    window.location.href = "mailto:melissaineza8@gmail.com?subject=Partnership%20Inquiry&body=Hello,%20I'd%20like%20to%20discuss%20a%20potential%20partnership.";
+    window.location.href = "mailto:info@pixeleye.rw?subject=Partnership%20Inquiry&body=Hello,%20I'd%20like%20to%20discuss%20a%20potential%20partnership.";
   };
 
   // Animation variants
