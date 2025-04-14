@@ -48,7 +48,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 15000); // slideshow is gonna take 15 seconds 
+    }, 17000); // slideshow is gonna take 15 seconds 
 
     return () => {
       clearInterval(interval); // clear the interval to prevent a leak 
