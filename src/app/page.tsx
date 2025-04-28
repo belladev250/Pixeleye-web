@@ -82,11 +82,7 @@ export default function Home() {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }
 
-  const handleEmailClick = () => {
-    window.location.href = "mailto:info@pixeleye.rw?subject=Partnership%20Inquiry&body=Hello,%20I'd%20like%20to%20discuss%20a%20potential%20partnership.";
-  };
-
-  // Animation variants
+    // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: {
