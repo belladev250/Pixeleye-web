@@ -93,7 +93,7 @@ const About = () => {
             variants={staggerChildren}
           >
             <motion.p variants={fadeInUp}>
-              Since 2015, we have been a go-to creative agency for entities that seek crafting narratives that move, inspire and transform. Our vision is clear: Helping businesses build impact through innovative storytelling.
+              Since 2015, we have been a go-to creative agency for entities that seek to craft narratives that move, inspire and transform. Our vision is clear: Helping businesses build impact through innovative storytelling.
               At Pixel Eye, we give life to creative projects that amplify the client&apos;s vision and mission. Through our services - branding, audio-visual production and campaign management – we shape brand images and build customer relationships that last a lifetime.
             </motion.p>
             <motion.h1

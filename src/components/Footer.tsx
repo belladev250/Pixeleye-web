@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
   
       <footer className="font-Gothic text-center mt-6">
-        <p>© 2025 Pixeleye, 2012-2025.</p>
+        <p>© 2025 Pixeleye, 2015-2025.</p>
         <p>We love our customers!</p>
       </footer>
     </div>

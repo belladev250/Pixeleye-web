@@ -36,7 +36,7 @@ const join = () => {
 
           <div className="space-y-6 md:space-y-40 text-center md:text-left">
             <div className='space-y-3'>
-              <p className="font-Gothic text-sm md:text-md">Full time</p>
+              <p className="font-Gothic text-sm md:text-md">Full-time</p>
               <p className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]">Senior Designer</p>
             </div>
             <div className='flex space-x-12'>
