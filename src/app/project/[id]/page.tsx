@@ -36,6 +36,10 @@ const ProjectPage = () => {
     }
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Re-process Instagram embeds when content changes
   useEffect(() => {
     if (instagramLoaded && project?.socialPosts && typeof window.instgrm?.Embeds?.process === 'function') {
