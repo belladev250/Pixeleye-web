@@ -9,6 +9,19 @@ import Lenis from '@studio-freight/lenis';
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from 'next/router';
 
+
+
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
+
+
 const ProjectPage = () => {
 
   const params = useParams();
@@ -34,6 +47,10 @@ const ProjectPage = () => {
     } else if (window.instgrm) {
       setInstagramLoaded(true);
     }
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   // Re-process Instagram embeds when content changes
