@@ -158,7 +158,7 @@ const Stories = () => {
                   className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]"
                   variants={fadeInUp}
                 >
-                  How Creative Companies Create Human-Centric Brands
+                  Common Logo Mistakes That Clients Make
                 </motion.p>
               </motion.div>
               
