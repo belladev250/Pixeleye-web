@@ -162,7 +162,7 @@ const ProjectPage = () => {
                   variants={fadeIn}
                   custom={0}
                 >
-                  BRAND IDENTITY
+                  {item.title}
                 </motion.p>
                 <motion.h2
                   className="text-xl md:text-2xl font-bold my-2 md:mb-4"
@@ -336,7 +336,7 @@ const ProjectPage = () => {
               initial="hidden"
               animate="visible"
             >
-              <motion.p className='text-lg md:text-xl text-gold font-Gothic' variants={fadeIn} custom={0}>BRAND IDENTITY</motion.p>
+              <motion.p className='text-lg md:text-xl text-gold font-Gothic' variants={fadeIn} custom={0}>{project.title}</motion.p>
               <motion.p className="text-2xl md:text-3xl font-Caslon" variants={fadeIn} custom={1}>{project.name}</motion.p>
               <motion.p className="text-base md:text-lg font-Gothic" variants={fadeIn} custom={2}>{project.details}</motion.p>
 

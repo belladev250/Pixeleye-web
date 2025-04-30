@@ -1,6 +1,7 @@
 'use client';
 export interface Project {
   id: string;
+  title: string;
   name: string;
   description: string;
   description2: string;
@@ -35,6 +36,7 @@ export interface Project {
 
 export interface GroupedProject {
   id: string;
+  title: string;
   layoutType: "full" | "half";
   items?: Project[];
   name?: string;
@@ -68,6 +70,7 @@ export interface GroupedProject {
 const projects: Project[] = [
   {
     id: "rwandafoam",
+    title: "BRAND REVIVAL",
     name: "RWANDAFOAM",
     details: "RwandaFoam is a prominent manufacturer of mattresses and sleep accessories established in 1983. They specialize in producing high-quality foam mattresses designed for comfort and airflow, with a focus on enhancing sleep quality and providing value to customers.",
     description: "Re-establishing a reputable brand name across all ",
@@ -86,7 +89,7 @@ const projects: Project[] = [
     projSubtitle1: "RwandaFoam at Tour du",
     projSubtitle2: " Rwanda",
     projDesc1: "As part of elevating the brand image, Pixel Eye launched Sirimuka na RwandaFoam [Upgrade with RwandaFoam], the campaign that positioned the mattress giant as an attractive choice for high-end clientele.  The aim was to change a mindset held by Made-in-Rwanda-equals-poor-quality believers; revealing the intricate process and premium materials it takes to make the award-winning mattresses.",
-    proj2Subtitle1: "Re-establish the brand's",
+    proj2Subtitle1: "Re-establishing the brand's",
     proj2Subtitle2: "digital presence",
     proj2Desc1: "With the need to revive their public presence and re-establish themselves as the leading manufacturer of Pure foam mattresses in Rwanda, we developed a campaign-based communication plan, that focused on re-establishing a reputable brand name for RwandaFoam across all social media platforms, increase product knowledge by using TV commercials, and thus generate more sales by establishing RwandaFoam's online shopping platform.",
     sub2Image1: "/assets/foam1.jpg",
@@ -100,6 +103,7 @@ const projects: Project[] = [
   },
   {
     id: "aegis",
+    title: "AEGIS IDENTITY",
     name: "AEGIS TRUST",
     description: "Preserve memory through visual",
     description2: "and written narratives",
@@ -133,7 +137,8 @@ const projects: Project[] = [
 
   {
     id: "250-podcast",
-    name: "250 Podcast lab",
+    title: "250 IDENTITY",
+    name: "250 Podcast Lab",
     description: "Comprehensive branding and",
     description2: "training support",
     image: "/assets/group.jpg",
@@ -142,7 +147,7 @@ const projects: Project[] = [
     mainImage: "",
     dupImage: "",
     video: "/PxEvids/Videos/250 PODCAST CEREMONY.mp4",
-    survey1: "The podcasting game might have taken slightly over a minute to get in the Land of a Thousand Hills, but it came in full motion when it got here! 250 Podcast Lab was founded with the ambition of nurturing the podcasting ecosystem in Rwanda, aiming to empower local storytellers and creators. At the onset, we faced challenges in establishing a strong, recognizable brand identity while trying to differentiate ourselves in a competitive and emerging market. The demand for a cohesive and professional image that resonated with both creators and audiences was critical to our long-term success.",
+    survey1: "The podcasting game might have taken slightly over a minute to get to the Land of a Thousand Hills, but it came in full motion when it got here! 250 Podcast Lab was founded with the ambition of nurturing the podcasting ecosystem in Rwanda, aiming to empower local storytellers and creators. At the onset, we faced challenges in establishing a strong, recognizable brand identity while trying to differentiate ourselves in a competitive and emerging market. The demand for a cohesive and professional image that resonated with both creators and audiences was critical to our long-term success.",
     solution1: "We provided a comprehensive branding solution that aligned with the core mission. Creating 250 Podcast Lab felt like stepping into a vibrant storytelling workshop, where every idea had the potential to resonate far and wide. We weren’t just barely creators—we were collaborators. From building the brand identity to shaping the learning experience, ",
     solution2: "we dove in headfirst. We designed and provided the learning materials, tailored to the needs of budding podcasters, and stayed hands-on by supervising the classes to bring those lessons to life. This wasn’t just about tools or content; it was about building a space where Rwanda’s next generation of audio creators could experiment, grow, and find their voice.",
     subImage1: "/assets/man1.png",
@@ -166,6 +171,7 @@ const projects: Project[] = [
 
   {
     id: "youth-connekt",
+    title: "YC IDENTITY",
     name: "YOUTH CONNEKT AFRICA 2024",
     description: "Full-scope rebranding and campaign",
     description2: "execution",
@@ -198,6 +204,7 @@ const projects: Project[] = [
   },
   {
     id: "wtdc",
+    title: "ITU IDENTITY",
     name: " ITU WTDC",
     description: "Event coverage and",
     description2: "Audio-visual production",
@@ -230,6 +237,7 @@ const projects: Project[] = [
   },
   {
     id: "jibu",
+    title: "JIBU IDENTITY",
     name: "JIBU",
     description: "Positioned Jibu as a reliable provider",
     description2: " through creative strategy.",
@@ -263,6 +271,7 @@ const projects: Project[] = [
   },
   {
     id: "hanga-pitchfest",
+    title: "JIBU IDENTITY",
     name: "HANGA PITCHFEST",
     description: "Elevated Hanga’s presence through design, storytelling,",
     description2: "and strategy.",
@@ -296,6 +305,7 @@ const projects: Project[] = [
 
   {
     id: "trend-tense",
+    title: "TREND IDENTITY",
     name: "TREND TENSE",
     description: "Simplified complex trends into,",
     description2: " relatable bite-sized content.",
@@ -334,6 +344,7 @@ const projects: Project[] = [
 
   {
     id: "imivugo",
+    title: "IMIVUGO IDENTITY",
     name: "IMIVUGO SERIES",
     description: "Highlighting local creatives who  ",
     description2: "deserve to be seen and heard.",
@@ -371,6 +382,7 @@ const projects: Project[] = [
   },
   {
     id: "tekana",
+    title: "BRAND IDENTITY",
     name: "TEKANA ONLINE",
     description: "Built a campaign that made online safety accessible",
     description2: "to all Rwandans.",
@@ -412,6 +424,7 @@ projects.forEach((project) => {
     if (tempGroup.length === 2) {
       groupedProjects.push({
         id: `${tempGroup[0].id}-${tempGroup[1].id}`,
+        title: "",
         layoutType: "half",
         items: [...tempGroup],
         mainImage: "",
@@ -445,6 +458,7 @@ projects.forEach((project) => {
     if (tempGroup.length > 0) {
       groupedProjects.push({
         id: tempGroup[0].id,
+        title: "",
         layoutType: "half",
         items: [...tempGroup],
         mainImage: "",
