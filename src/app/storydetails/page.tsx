@@ -238,29 +238,29 @@ const StoryDetails = () => {
                                 className='space-y-3'
                                 variants={fadeInUp}
                             >
-                                <p className="font-Gothic text-sm md:text-md">24.01.2022</p>
+                                <p className="font-Gothic text-sm md:text-md">Coming Soon!</p>
                                 <p className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]">
-                                Why is bleeding important in graphic design? [Coming soon...]
+                                Why is bleeding important in graphic design?
                                 </p>
                             </motion.div>
                             <motion.div
                                 className="space-y-4"
                                 variants={fadeInUp}
                             >
-                                <Link href='/storydetails'>
+                                <Link href='/'>
                                     <motion.div
                                         className="flex space-x-4 items-center"
                                         whileHover={{ x: 10 }}
                                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                     >
-                                        <button className="font-Gothic font-semibold">Read More</button>
-                                        <HiArrowLongRight fill="gold" className="text-xl md:text-2xl" />
+                                        <button className="font-Gothic font-semibold">Currently Cooking It</button>
+                                        {/* <HiArrowLongRight fill="gold" className="text-xl md:text-2xl" /> */}
                                     </motion.div>
                                 </Link>
                                 <motion.h1
                                     className="border-b-2 border-gold w-32"
                                     initial={{ width: 0 }}
-                                    whileInView={{ width: "8rem" }}
+                                    whileInView={{ width: "10rem" }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.8, ease: "easeOut" }}
                                 ></motion.h1>

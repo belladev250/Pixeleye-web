@@ -254,7 +254,7 @@ const Stories = () => {
                     whileHover="hover"
                   >
                     <motion.button className="font-Gothic font-semibold">
-                      Currently Cooking!
+                      Currently Cooking It
                     </motion.button>
                     {/* <motion.div variants={buttonHover}>
                       <HiArrowLongRight fill="gold" className="text-xl md:text-2xl" />
