@@ -97,7 +97,7 @@ const StoryDetails = () => {
                 viewport={{ once: true, amount: 0.1 }}
                 variants={imageZoom}
             >
-                <Image src="/assets/file.jpg" alt="camera" width={1500} height={200} layout="responsive" />
+                <Image src="/assets/logo-m.jpg" alt="camera" width={1500} height={200} layout="responsive" />
             </motion.div>
 
             <motion.div
@@ -227,7 +227,7 @@ const StoryDetails = () => {
                             className="w-full md:w-1/3 flex justify-center md:justify-start"
                             variants={imageZoom}
                         >
-                            <Image src="/assets/trend.jpg" alt="eye" width={300} height={300} className='h-auto w-full object-cover' />
+                            <Image src="/assets/bleeding.jpg" alt="eye" width={300} height={300} className='h-auto w-full object-cover' />
                         </motion.div>
 
                         <motion.div
@@ -240,7 +240,7 @@ const StoryDetails = () => {
                             >
                                 <p className="font-Gothic text-sm md:text-md">24.01.2022</p>
                                 <p className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]">
-                                    Welcome to Trends Tense! 🚀 Let's get into this week's hottest topics and must-see trends!
+                                Why is bleeding important in graphic design? [Coming soon...]
                                 </p>
                             </motion.div>
                             <motion.div

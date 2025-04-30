@@ -132,7 +132,7 @@ const Stories = () => {
               variants={imageScale}
             >
               <Image 
-                src="/assets/files.jpg" 
+                src="/assets/mistakes.jpg" 
                 alt="eye" 
                 width={300} 
                 height={300} 
@@ -152,7 +152,7 @@ const Stories = () => {
                   className="font-Gothic text-sm md:text-md"
                   variants={fadeInUp}
                 >
-                  24.01.2022
+                  30.04.2025
                 </motion.p>
                 <motion.p 
                   className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]"
@@ -213,7 +213,7 @@ const Stories = () => {
               variants={imageScale}
             >
               <Image 
-                src="/assets/trend.jpg" 
+                src="/assets/bleeding.jpg" 
                 alt="eye" 
                 width={300} 
                 height={300} 
@@ -233,13 +233,13 @@ const Stories = () => {
                   className="font-Gothic text-sm md:text-md"
                   variants={fadeInUp}
                 >
-                  24.01.2022
+                  Coming Soon!
                 </motion.p>
                 <motion.p 
                   className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]"
                   variants={fadeInUp}
                 >
-                  Welcome to Trends Tense! 🚀 Let's get into this week's hottest topics and must-see trends!
+                 Why is bleeding important in graphic design?
                 </motion.p>
               </motion.div>
               
@@ -247,24 +247,24 @@ const Stories = () => {
                 className="space-y-4"
                 variants={staggerChildren}
               >
-                <Link href='/storydetails'>
+                <Link href=''>
                   <motion.div 
                     className="flex space-x-4 items-center"
                     variants={fadeInUp}
                     whileHover="hover"
                   >
                     <motion.button className="font-Gothic font-semibold">
-                      Read More
+                      Currently Cooking!
                     </motion.button>
-                    <motion.div variants={buttonHover}>
+                    {/* <motion.div variants={buttonHover}>
                       <HiArrowLongRight fill="gold" className="text-xl md:text-2xl" />
-                    </motion.div>
+                    </motion.div> */}
                   </motion.div>
                 </Link>
                 <motion.div 
                   className="border-b-2 border-gold"
                   initial={{ width: 0 }}
-                  whileInView={{ width: "8rem" }} // w-32 equivalent
+                  whileInView={{ width: "10rem" }} // w-32 equivalent
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 ></motion.div>
