@@ -204,7 +204,7 @@ const ServicesPage = () => {
                 <p className="font-Gothic text-md">{services[activeIndex].desc}</p>
               </div>
               <div className="flex-1 mt-32">
-                <p className="font-Gothic text-md tracking-widest text-gold font-bold mb-4">
+                <p className="font-Gothic text-md tracking-widest text-gold font-bold mb-4 uppercase">
                   {services[activeIndex].subtitle}
                 </p>
                 <p className="font-Gothic text-md">{services[activeIndex].desc2}</p>

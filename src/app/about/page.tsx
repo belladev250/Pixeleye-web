@@ -117,7 +117,7 @@ const About = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <Image
-          src="/assets/about.jpg"
+          src="/assets/team.JPG"
           alt="camera"
           width={1500}
           height={800}

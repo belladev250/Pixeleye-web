@@ -12,13 +12,13 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const slides = [
-    { video: '/PxEvids/Videos/jibu.mp4', text: 'JIBU', desc: 'Driving change through communication', link: '/project/jibu' },
-    { video: '/PxEvids/Videos/aegis.mp4', text: 'AEGIS', desc: 'The stories of peace books', link: '/project/aegis' },
+    { video: '/PxEvids/Videos/jibu.mp4', text: 'JIBU', desc: 'Driving Change Through Communication', link: '/project/jibu' },
+    { video: '/PxEvids/Videos/aegis.mp4', text: 'AEGIS', desc: 'The "Stories Of Peace" book', link: '/project/aegis' },
     { video: '/PxEvids/Videos/HANGA PITCHFEST FINALE 2024.mp4', text: 'HANGA PITCHFEST', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
     { video: '/PxEvids/Videos/YCAS_24 Web reel.mp4', text: 'YOUTH CONNEKT AFRICA 2024', desc: 'Campaign Creative Direction', link: '/project/youth-connekt' },
     { video: '/PxEvids/Videos/250 PODCAST CEREMONY.mp4', text: '250 PODCAST', desc: 'Identity Development & Training Coordination', link: '/project/250-podcast' },
     { video: '/PxEvids/Videos/HANGA HUBS FINALE HIGHLIGHT.mp4', text: 'HANGA HUBS', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
-    { video: '/PxEvids/Videos/Rwandafoam.mp4', text: 'RWANDA FOAM', desc: 'Brand Revival implementation', link: '/project/rwandafoam' },
+    { video: '/PxEvids/Videos/Rwandafoam.mp4', text: 'RWANDAFOAM', desc: 'Brand Revival Implementation', link: '/project/rwandafoam' },
     { video: '/PxEvids/Videos/SRH web HIGHLIGHT.mp4', text: 'HANGA SRH', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
   ]
 
@@ -340,13 +340,13 @@ export default function Home() {
                   className="text-3xl lg:text-5xl font-Caslon"
                   variants={textReveal}
                 >
-                  Rwandafoam: Brand
+                  RwandaFoam: Brand
                 </motion.p>
                 <motion.p
                   className="text-3xl lg:text-5xl font-Caslon"
                   variants={textReveal}
                 >
-                  Revival implementation
+                  Revival Implementation
                 </motion.p>
               </div>
 
@@ -484,8 +484,8 @@ export default function Home() {
                     <HiArrowLongRight fill="gold" className="text-4xl" />
                   </div>
                   <div>
-                    <p className="text-white text-3xl md:text-4xl font-Caslon">Campaign creative </p>
-                    <p className="text-white text-3xl md:text-4xl font-Caslon"> direction</p>
+                    <p className="text-white text-3xl md:text-4xl font-Caslon">Campaign Creative </p>
+                    <p className="text-white text-3xl md:text-4xl font-Caslon"> Direction</p>
                   </div>
                 </motion.div>
               </Link>
@@ -557,8 +557,8 @@ export default function Home() {
                     <HiArrowLongRight fill="gold" className="text-4xl" />
                   </div>
                   <div>
-                    <p className="text-white text-3xl md:text-4xl font-Caslon">Audio-visual</p>
-                    <p className="text-white text-3xl md:text-4xl font-Caslon"> production</p>
+                    <p className="text-white text-3xl md:text-4xl font-Caslon">Audio-Visual</p>
+                    <p className="text-white text-3xl md:text-4xl font-Caslon">Production</p>
                   </div>
                 </motion.div>
               </Link>
