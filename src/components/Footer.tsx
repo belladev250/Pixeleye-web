@@ -11,7 +11,7 @@ const Footer = () => {
     <div className="bg-navColor relative">
     <div className="p-20">
     <div className="flex flex-wrap items-center justify-center gap-4 text-center md:justify-between">
-  <Link href="/about" className="font-Gothic font-light text-lg text-white">About</Link>
+  <Link href="/about" className="font-Gothic font-light text-md text-white">About</Link>
   <Link href="/portfolio" className="font-Gothic font-light text-md text-white">Portfolio</Link>
   <Link href="/services" className="font-Gothic font-light text-md text-white">Services</Link>
 

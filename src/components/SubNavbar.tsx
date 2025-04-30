@@ -12,7 +12,7 @@ const SubNavbar = () => {
         <Image src='/assets/logo.svg' alt="logo" width={130} height={130} className='flex-shrink-0' />
         </Link>
         <Link href='/about' className='font-Gothic font-light text-md text-white'>About</Link>
-        <Link href='/portfolio' className='font-Gothic font-light text-md text-white'>Portofolio</Link>
+        <Link href='/portfolio' className='font-Gothic font-light text-md text-white'>Portfolio</Link>
         <Link href='/services' className='font-Gothic font-light text-md text-white'>Services</Link>
         <Link href='/stories' className='font-Gothic font-light text-md text-white'>Stories</Link>
     </div>  
