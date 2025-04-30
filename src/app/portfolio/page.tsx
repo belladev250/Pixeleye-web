@@ -133,7 +133,7 @@ const Portfolio = () => {
                   height={1000}
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="absolute inset-0 bg-black opacity-40"></div>
 
                 <motion.div 
                   className="absolute bottom-0 p-3 sm:p-4 lg:p-8 space-y-2 md:space-y-4"
@@ -191,7 +191,7 @@ const Portfolio = () => {
                         height={800}
                         className="w-full h-auto object-cover"
                       />
-                      <div className="absolute inset-0 bg-black opacity-50"></div>
+                      <div className="absolute inset-0 bg-black opacity-40"></div>
 
                       <motion.div 
                         className="absolute bottom-0 p-3 sm:p-4 lg:p-8 space-y-2 md:space-y-4"
