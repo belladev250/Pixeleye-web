@@ -145,7 +145,7 @@ const StoryDetails = () => {
                     The most common logo formats include:
                 </motion.p>
 
-                <motion.div className='ml-16' >
+                <motion.div className='md:ml-16 sm:ml-2 space-y-4' >
 
                     <motion.div className="flex space-x-2">
                         <motion.div className="w-2 h-2 bg-gold rounded-full mt-4" variants={fadeInUp} ></motion.div>
