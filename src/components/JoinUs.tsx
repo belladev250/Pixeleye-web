@@ -19,7 +19,7 @@ const JoinUs = () => {
       <div className="font-Caslon space-y-8  absolute top-10 lg:top-32  mr-2 lg:mr-0  ">
         <div className="">
           <p className=" font-Caslon text-3xl lg:text-5xl ">We are looking for dynamic</p>
-          <p className=" font-Caslon text-3xl lg:text-5xl  "> and creative minds to join our team. </p>
+          <p className=" font-Caslon text-3xl lg:text-5xl  ">and creative minds to join our team. </p>
         </div>
         <div>
         <Link href='/joinus' className=''>

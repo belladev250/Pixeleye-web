@@ -310,7 +310,7 @@ const projects: Project[] = [
     solution1: "PixelEye saw a chance to turn the confusion into clarity and curiosity into connection. We created a fresh, approachable way to talk about big ideas—breaking down complex trends into simple, engaging threads that feel like a conversation with a friend. By sharing simple, bite-sized viewpoints on social media, we’ve made it easier for people to understand what’s happening around them and why it’s important. Whether it’s the latest tech, a shift in how we connect, or something completely new, Trends Tense brings those conversations to life in a way that’s easy to grasp, fun to follow, and hard to ignore.",
     solution2: "",
     subImage1: "/assets/trends1.png",
-    subImage2: "/assets/trends2.png",
+    subImage2: "/assets/trends.jpg",
     subImage3: "/assets/ben.png",
     projSubtitle1: "",
     projSubtitle2: "",
