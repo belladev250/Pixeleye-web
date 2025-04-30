@@ -17,13 +17,13 @@ const JoinUs = () => {
       </div>
 
       <div className="font-Caslon space-y-8  absolute top-10 lg:top-32  mr-2 lg:mr-0  ">
-        <div className="">
-          <p className=" font-Caslon text-3xl lg:text-5xl ">We are looking for dynamic</p>
-          <p className=" font-Caslon text-3xl lg:text-5xl  ">and creative minds to join our team. </p>
+        <div className="space-y-2">
+          <p className=" font-Caslon text-3xl lg:text-5xl ">Let’s Build Something Meaningful</p>
+          <p className=" font-Caslon text-3xl lg:text-5xl  ">Contact Us Today.</p>
         </div>
         <div>
-        <Link href='/joinus' className=''>
-          <button className='font-Gothic bg-white text-black p-4 px-8 ' > Join us Today</button>
+        <Link href='/contact' className=''>
+          <button className='font-Gothic bg-white text-black p-4 px-8 ' >Contact Us</button>
         </Link>
         </div>
         
