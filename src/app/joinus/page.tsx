@@ -31,18 +31,18 @@ const join = () => {
             <div className='space-y-6'>
               <p className="font-Caslon text-2xl lg:text-4xl text-gold">We're not hiring right now!</p>
               <p className="font-Gothic text-md md:text-md lg:text-md md:w-[80%] lg:w-[70%]">
-                Thank you for your interest—while there are no current openings, we welcome passionate individuals and encourage you to check back or follow us on social media for future opportunities.
+                Thank you for your interest — while there are no current openings, we welcome passionate individuals and encourage you to check back or follow us on social media for future opportunities.
               </p>
             </div>
             <div className='pt-8'>
               <div className="space-y-4">
                 <div className="flex space-x-4 items-center">
                   <a href="https://www.instagram.com/pixeleye_rw/" target="_blank">
-                    <p className="relative font-semibold">FOLLOW US</p>
+                    <p className="relative font-regular">FOLLOW US</p>
                   </a>
                   <HiArrowLongRight fill="gold" className="text-xl md:text-2xl" />
                 </div>
-                <h1 className="border-b-2 border-gold w-32"></h1>
+                <h1 className="border-b-2 border-gold w-40"></h1>
               </div>
             </div>
           </div>
