@@ -239,7 +239,7 @@ const Stories = () => {
                   className="font-Caslon text-2xl md:text-4xl lg:text-4xl w-full lg:w-[40vw]"
                   variants={fadeInUp}
                 >
-                 Why is bleeding important in graphic design?
+                 Why Is Bleeding Important In Graphic Design?
                 </motion.p>
               </motion.div>
               
