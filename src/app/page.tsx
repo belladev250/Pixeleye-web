@@ -176,6 +176,8 @@ export default function Home() {
                   preload="auto"
                 >
                   <source src={slide.video} type="video/mp4" />
+                  <source src={slide.video.replace('.mp4', '.webm')} type="video/webm" />
+                  <source src={slide.video.replace('.mp4', '.ogv')} type="video/ogg" />
                 </video>
 
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/60 z-10"></div>
