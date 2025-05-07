@@ -14,12 +14,12 @@ export default function Home() {
   const slides = [
     { video: '/PxEvids/Videos/jibu.mp4', text: 'JIBU', desc: 'Driving Change Through Communication', link: '/project/jibu' },
     { video: '/PxEvids/Videos/aegis.mp4', text: 'AEGIS', desc: 'The "Stories Of Peace" book', link: '/project/aegis' },
-    { video: '/PxEvids/Videos/HANGA-PITCHFEST-FINALE-2024.mp4', text: 'HANGA PITCHFEST', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
-    { video: '/PxEvids/Videos/YCAS_24-Web-reel.mp4', text: 'YOUTH CONNEKT AFRICA 2024', desc: 'Campaign Creative Direction', link: '/project/youth-connekt' },
-    { video: '/PxEvids/Videos/250-PODCAST-CEREMONY.mp4', text: '250 PODCAST', desc: 'Identity Development & Training Coordination', link: '/project/250-podcast' },
-    { video: '/PxEvids/Videos/HANGA-HUBS-FINALE-HIGHLIGHT.mp4', text: 'HANGA HUBS', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
-    { video: '/PxEvids/Videos/Rwandafoam.mp4', text: 'RWANDAFOAM', desc: 'Brand Revival Implementation', link: '/project/rwandafoam' },
-    { video: '/PxEvids/Videos/SRH-web-HIGHLIGHT.mp4', text: 'HANGA SRH', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
+    { video: '/PxEvids/Videos/hanga-pitch.mp4', text: 'HANGA PITCHFEST', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
+    { video: '/PxEvids/Videos/youth.mp4', text: 'YOUTH CONNEKT AFRICA 2024', desc: 'Campaign Creative Direction', link: '/project/youth-connekt' },
+    { video: '/PxEvids/Videos/ceremony.mp4', text: '250 PODCAST', desc: 'Identity Development & Training Coordination', link: '/project/250-podcast' },
+    { video: '/PxEvids/Videos/hanga-hubs.mp4', text: 'HANGA HUBS', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
+    { video: '/PxEvids/Videos/rwandafoam.mp4', text: 'RWANDAFOAM', desc: 'Brand Revival Implementation', link: '/project/rwandafoam' },
+    { video: '/PxEvids/Videos/srh.mp4', text: 'HANGA SRH', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
   ]
 
   // Initialize smooth scrolling with Lenis
