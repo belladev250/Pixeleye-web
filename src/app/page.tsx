@@ -61,39 +61,52 @@ export default function Home() {
   useEffect(() => {
     console.log('🔄 Slide changed to:', currentSlide, slides[currentSlide].video);
     
-    const video = videoRef.current;
-    if (!video) {
-      console.error('❌ No video ref!');
-      return;
-    }
-
-    const playVideo = async () => {
-      try {
-        video.muted = true;
-        video.currentTime = 0;
-        video.load();
-        
-        console.log('🎬 Attempting to play...');
-        await video.play();
-        console.log('✅ Playing successfully!');
-      } catch (error) {
-        console.error('❌ Play failed:', error);
+    // Small delay to ensure video element is mounted
+    const timer = setTimeout(() => {
+      const video = videoRef.current;
+      
+      if (!video) {
+        console.error('❌ No video ref! Video element not mounted.');
+        return;
       }
-    };
 
-    // Wait for video to be ready
-    if (video.readyState >= 2) {
-      playVideo();
-    } else {
-      video.addEventListener('loadeddata', playVideo, { once: true });
-    }
+      console.log('📹 Video ref exists:', video);
+      console.log('📹 Video readyState:', video.readyState);
+
+      const playVideo = async () => {
+        try {
+          video.muted = true;
+          video.currentTime = 0;
+          
+          console.log('🎬 Attempting to play...');
+          await video.play();
+          console.log('✅ Playing successfully!');
+        } catch (error:any) {
+          console.error('❌ Play failed:', error.name, error.message);
+        }
+      };
+
+      // Wait for video to be ready
+      if (video.readyState >= 2) {
+        console.log('Video already loaded, playing now');
+        playVideo();
+      } else {
+        console.log('Waiting for video to load...');
+        video.addEventListener('loadeddata', () => {
+          console.log('Video loaded, now playing');
+          playVideo();
+        }, { once: true });
+      }
+    }, 200);
 
     return () => {
-      if (video) {
-        video.pause();
+      clearTimeout(timer);
+      if (videoRef.current) {
+        videoRef.current.pause();
       }
     };
   }, [currentSlide]);
+
 
 
 
