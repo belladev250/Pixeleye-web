@@ -55,27 +55,66 @@ export default function Home() {
     }
   }, [slides.length]);
 
-  // Reset and play video once the slide changes
+
 
 // Reset and play video once the slide changes
   useEffect(() => {
     let isMounted = true;
     
     const playVideo = async () => {
-      if (videoRef.current && isMounted) {
-        try {
-          videoRef.current.currentTime = 0;
-          await videoRef.current.play();
-        } catch (error:any) {
-          if (error.name !== 'AbortError' && isMounted) {
-            console.log("Video playback error:", error);
+      const video = videoRef.current;
+      if (!video || !isMounted) return;
+
+      try {
+        // Ensure muted for autoplay compliance
+        video.muted = true;
+        video.playsInline = true;
+        
+        // Update video source
+        const currentVideo = slides[currentSlide].video;
+        if (video.src !== window.location.origin + currentVideo) {
+          video.src = currentVideo;
+        }
+        
+        // Reset to beginning
+        video.currentTime = 0;
+        
+        // Wait for video to be ready
+        await new Promise((resolve) => {
+          if (video.readyState >= 3) {
+            resolve(null);
+          } else {
+            video.addEventListener('canplay', () => resolve(null), { once: true });
+          }
+        });
+        
+        // Attempt playback
+        if (isMounted) {
+          await video.play();
+          console.log('✅ Video playing:', currentVideo);
+        }
+      } catch (error:any) {
+        if (isMounted && error.name !== 'AbortError') {
+          console.error("❌ Video playback error:", error.name, error.message);
+          
+          // Handle autoplay restrictions
+          if (error.name === 'NotAllowedError') {
+            console.warn('⚠️ Autoplay blocked - user interaction required');
+            // Add one-time click listener to start playback
+            const startOnClick = () => {
+              if (videoRef.current) {
+                videoRef.current.play().catch(e => console.error('Click play failed:', e));
+              }
+              document.removeEventListener('click', startOnClick);
+            };
+            document.addEventListener('click', startOnClick);
           }
         }
       }
     };
 
-    // Small delay to ensure DOM is ready
-    const timer = setTimeout(playVideo, 100);
+    // Delay to ensure DOM is ready
+    const timer = setTimeout(playVideo, 150);
 
     return () => {
       isMounted = false;
@@ -84,7 +123,9 @@ export default function Home() {
         videoRef.current.pause();
       }
     };
-  }, [currentSlide]);
+  }, [currentSlide, slides]);
+
+  
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
