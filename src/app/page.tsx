@@ -57,21 +57,33 @@ export default function Home() {
 
   // Reset and play video once the slide changes
 
+// Reset and play video once the slide changes
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-
-      const playPromise = videoRef.current.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-          })
-          .catch(error => {
+    let isMounted = true;
+    
+    const playVideo = async () => {
+      if (videoRef.current && isMounted) {
+        try {
+          videoRef.current.currentTime = 0;
+          await videoRef.current.play();
+        } catch (error:any) {
+          if (error.name !== 'AbortError' && isMounted) {
             console.log("Video playback error:", error);
-          });
+          }
+        }
       }
-    }
+    };
+
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(playVideo, 100);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timer);
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    };
   }, [currentSlide]);
 
   const handlePrev = () => {
