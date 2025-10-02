@@ -59,73 +59,43 @@ export default function Home() {
 
 // Reset and play video once the slide changes
   useEffect(() => {
-    let isMounted = true;
+    console.log('🔄 Slide changed to:', currentSlide, slides[currentSlide].video);
     
-    const playVideo = async () => {
-      const video = videoRef.current;
-      if (!video || !isMounted) return;
+    const video = videoRef.current;
+    if (!video) {
+      console.error('❌ No video ref!');
+      return;
+    }
 
+    const playVideo = async () => {
       try {
-        // Ensure muted for autoplay compliance
         video.muted = true;
-        video.playsInline = true;
-        
-        // Update video source
-        const currentVideo = slides[currentSlide].video;
-        if (video.src !== window.location.origin + currentVideo) {
-          video.src = currentVideo;
-        }
-        
-        // Reset to beginning
         video.currentTime = 0;
+        video.load();
         
-        // Wait for video to be ready
-        await new Promise((resolve) => {
-          if (video.readyState >= 3) {
-            resolve(null);
-          } else {
-            video.addEventListener('canplay', () => resolve(null), { once: true });
-          }
-        });
-        
-        // Attempt playback
-        if (isMounted) {
-          await video.play();
-          console.log('✅ Video playing:', currentVideo);
-        }
-      } catch (error:any) {
-        if (isMounted && error.name !== 'AbortError') {
-          console.error("❌ Video playback error:", error.name, error.message);
-          
-          // Handle autoplay restrictions
-          if (error.name === 'NotAllowedError') {
-            console.warn('⚠️ Autoplay blocked - user interaction required');
-            // Add one-time click listener to start playback
-            const startOnClick = () => {
-              if (videoRef.current) {
-                videoRef.current.play().catch(e => console.error('Click play failed:', e));
-              }
-              document.removeEventListener('click', startOnClick);
-            };
-            document.addEventListener('click', startOnClick);
-          }
-        }
+        console.log('🎬 Attempting to play...');
+        await video.play();
+        console.log('✅ Playing successfully!');
+      } catch (error) {
+        console.error('❌ Play failed:', error);
       }
     };
 
-    // Delay to ensure DOM is ready
-    const timer = setTimeout(playVideo, 150);
+    // Wait for video to be ready
+    if (video.readyState >= 2) {
+      playVideo();
+    } else {
+      video.addEventListener('loadeddata', playVideo, { once: true });
+    }
 
     return () => {
-      isMounted = false;
-      clearTimeout(timer);
-      if (videoRef.current) {
-        videoRef.current.pause();
+      if (video) {
+        video.pause();
       }
     };
-  }, [currentSlide, slides]);
+  }, [currentSlide]);
 
-  
+
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -294,6 +264,8 @@ export default function Home() {
         </div>
 
         {/* ABOUT SECTION */}
+
+
         <motion.div
           className="p-24 h-[700px] lg:h-[750px] bg-menuBg"
           initial="hidden"
