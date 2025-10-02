@@ -26,7 +26,7 @@ const nextConfig = {
   },
   
   // Ensure large files are handled properly
-  webpack(config) {
+  webpack(config:any) {
     config.module.rules.push({
       test: /\.(mp4|webm|ogg)$/,
       type: 'asset/resource',
