@@ -71,31 +71,56 @@ export default function Home() {
       }
 
       console.log('📹 Video ref exists:', video);
+      console.log('📹 Current src:', video.src);
       console.log('📹 Video readyState:', video.readyState);
+
+      // Force set the src and load
+      const videoSrc = slides[currentSlide].video;
+      if (video.src !== window.location.origin + videoSrc) {
+        console.log('🔄 Setting new video src:', videoSrc);
+        video.src = videoSrc;
+      }
+      
+      video.muted = true;
+      video.playsInline = true;
+      video.load(); // Force reload
+      
+      console.log('📹 After load - readyState:', video.readyState);
+      
 
       const playVideo = async () => {
         try {
-          video.muted = true;
           video.currentTime = 0;
-          
           console.log('🎬 Attempting to play...');
           await video.play();
           console.log('✅ Playing successfully!');
         } catch (error:any) {
           console.error('❌ Play failed:', error.name, error.message);
+          
+          // Try one more time after a brief delay
+          setTimeout(() => {
+            video.play().catch(e => console.error('Retry failed:', e));
+          }, 500);
         }
       };
 
       // Wait for video to be ready
-      if (video.readyState >= 2) {
-        console.log('Video already loaded, playing now');
+      if (video.readyState >= 3) {
+        console.log('✅ Video already loaded, playing now');
         playVideo();
       } else {
-        console.log('Waiting for video to load...');
-        video.addEventListener('loadeddata', () => {
-          console.log('Video loaded, now playing');
+        console.log('⏳ Waiting for video to load...');
+        video.addEventListener('canplay', () => {
+          console.log('✅ Video canplay event fired');
           playVideo();
         }, { once: true });
+        
+        // Timeout fallback
+        setTimeout(() => {
+          if (video.readyState < 3) {
+            console.warn('⚠️ Video still not ready after 3s, readyState:', video.readyState);
+          }
+        }, 3000);
       }
     }, 200);
 
