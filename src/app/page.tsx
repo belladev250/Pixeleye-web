@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { HiArrowLongRight } from "react-icons/hi2";
 import Link from "next/link";
@@ -9,7 +9,6 @@ import Lenis from '@studio-freight/lenis';
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   const slides = [
     { video: '/PxEvids/Videos/jibu.mp4', text: 'JIBU', desc: 'Driving Change Through Communication', link: '/project/jibu' },
@@ -22,7 +21,6 @@ export default function Home() {
     { video: '/PxEvids/Videos/srh.mp4', text: 'HANGA SRH', desc: 'Campaign Creative Direction', link: '/project/hanga-pitchfest' },
   ]
 
-  // Initialize smooth scrolling with Lenis
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -37,111 +35,40 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
-
-    setIsLoaded(true);
-
-    return () => {
-      lenis.destroy();
-    };
+    return () => lenis.destroy();
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 17000); // slideshow is gonna take 15 seconds 
-
-    return () => {
-      clearInterval(interval); // clear the interval to prevent a leak 
-    }
+    }, 17000);
+    return () => clearInterval(interval);
   }, [slides.length]);
 
-
-
-// Reset and play video once the slide changes
   useEffect(() => {
-    console.log('🔄 Slide changed to:', currentSlide, slides[currentSlide].video);
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.src = slides[currentSlide].video;
+    video.load();
     
-    // Small delay to ensure video element is mounted
-    const timer = setTimeout(() => {
-      const video = videoRef.current;
-      
-      if (!video) {
-        console.error('❌ No video ref! Video element not mounted.');
-        return;
-      }
+    const playVideo = () => {
+      video.play().catch(e => console.error('Play error:', e));
+    };
 
-      console.log('📹 Video ref exists:', video);
-      console.log('📹 Current src:', video.src);
-      console.log('📹 Video readyState:', video.readyState);
-
-      // Force set the src and load
-      const videoSrc = slides[currentSlide].video;
-      if (video.src !== window.location.origin + videoSrc) {
-        console.log('🔄 Setting new video src:', videoSrc);
-        video.src = videoSrc;
-      }
-      
-      video.muted = true;
-      video.playsInline = true;
-      video.load(); // Force reload
-      
-      console.log('📹 After load - readyState:', video.readyState);
-      
-
-      const playVideo = async () => {
-        try {
-          video.currentTime = 0;
-          console.log('🎬 Attempting to play...');
-          await video.play();
-          console.log('✅ Playing successfully!');
-        } catch (error:any) {
-          console.error('❌ Play failed:', error.name, error.message);
-          
-          // Try one more time after a brief delay
-          setTimeout(() => {
-            video.play().catch(e => console.error('Retry failed:', e));
-          }, 500);
-        }
-      };
-
-      // Wait for video to be ready
-      if (video.readyState >= 3) {
-        console.log('✅ Video already loaded, playing now');
-        playVideo();
-      } else {
-        console.log('⏳ Waiting for video to load...');
-        video.addEventListener('canplay', () => {
-          console.log('✅ Video canplay event fired');
-          playVideo();
-        }, { once: true });
-        
-        // Timeout fallback
-        setTimeout(() => {
-          if (video.readyState < 3) {
-            console.warn('⚠️ Video still not ready after 3s, readyState:', video.readyState);
-          }
-        }, 3000);
-      }
-    }, 200);
+    if (video.readyState >= 3) {
+      playVideo();
+    } else {
+      video.addEventListener('loadeddata', playVideo, { once: true });
+    }
 
     return () => {
-      clearTimeout(timer);
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
+      video.pause();
     };
   }, [currentSlide]);
 
-
-
-
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }
+  const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const handleNext = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
 
     // Animation variants
   const fadeIn = {
@@ -216,7 +143,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-50"></div>
 
           {/* Video section */}
-          <AnimatePresence mode="wait">
             {slides.map((slide, index) => index == currentSlide ? (
               <motion.div
                 key={index}
@@ -298,7 +224,6 @@ export default function Home() {
                 </div>
               </motion.div>
             ) : null)}
-          </AnimatePresence>
         </div>
 
         {/* ABOUT SECTION */}
