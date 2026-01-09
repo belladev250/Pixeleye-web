@@ -56,7 +56,6 @@ export default function Home() {
   }, [slides.length]);
 
   // Reset and play video once the slide changes
-
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
@@ -82,7 +81,7 @@ export default function Home() {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }
 
-    // Animation variants
+  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -152,7 +151,8 @@ export default function Home() {
     >
       <main>
         <div className="relative w-full h-[90vh] lg:h-[100vh]">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          {/* FIXED: Added z-10 to overlay */}
+          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
 
           {/* Video section */}
           <AnimatePresence mode="wait">
@@ -165,18 +165,18 @@ export default function Home() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
               >
-
+                {/* FIXED: Removed autoPlay attribute, added loop properly, changed preload */}
                 <video
                   ref={videoRef}
                   key={slide.video}
                   muted
                   playsInline={true}
                   className="w-full h-full object-cover"
-                  autoPlay
-                  preload="auto"
+                  preload="metadata"
+                  loop={true}
                 >
                   <source src={slide.video} type="video/mp4" />
-                  
+                  Your browser does not support the video tag.
                 </video>
 
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/60 z-10"></div>
@@ -282,10 +282,6 @@ export default function Home() {
                   variants={fadeIn}
                   whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
-                  {/* <div className="flex space-x-4">
-                    <button className="font-Gothic font-semibold" onClick={handleEmailClick}>Email us for partnerships</button>
-                    <HiArrowLongRight fill="gold" className="text-4xl" />
-                  </div> */}
                   <Link href='/services'>
                     <div className="flex space-x-4">
                       <button className="font-Gothic font-semibold">Explore our Services</button>
